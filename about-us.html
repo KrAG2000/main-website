@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowGenius AI - About Us</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="font-inter antialiased bg-gray-50 text-gray-800">
+
+    <!-- Header/Navigation Bar (Consistent across pages) -->
+    <header class="bg-white shadow-sm py-4 fixed w-full z-50 rounded-b-lg">
+        <nav class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <!-- Logo and Site Name -->
+                <a href="/" class="flex items-center space-x-2 text-2xl font-bold text-indigo-700 hover:text-indigo-900 transition-colors">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9.25 22 15 22 14.5 17M12 2v20"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12c-3.866 0-7 3.134-7 7s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7z"></path>
+                    </svg>
+                    <span>FlowGenius AI</span>
+                </a>
+            </div>
+            <!-- Navigation Links -->
+            <ul class="flex space-x-6 md:space-x-8">
+                <li><a href="/" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Home</a></li>
+                <li><a href="/features" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Features</a></li>
+                <li><a href="/solutions" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Solutions</a></li>
+                <li><a href="/pricing" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Pricing</a></li>
+                <li><a href="/testimonials" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Testimonials</a></li>
+                <li><a href="/about-us" class="text-indigo-700 font-medium transition-colors">About Us</a></li>
+                <li><a href="/blogs" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Blog</a></li>
+                <li><a href="/faqs" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Support</a></li>
+                <li><a href="/contact-us" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Contact</a></li>
+            </ul>
+            <!-- Auth Buttons -->
+            <div class="flex items-center space-x-4">
+                <a href="/sign-in_out" class="text-indigo-700 hover:text-indigo-900 font-medium transition-colors">Login</a>
+                <a href="/sign-in_out" class="bg-indigo-600 text-white px-5 py-2 rounded-full hover:bg-indigo-700 transition-colors shadow-lg transform hover:scale-105">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-20"> <!-- Added pt-20 to account for fixed header -->
+        <!-- Hero Section for About Us Page -->
+        <section class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-16 md:py-20 text-center">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4 animate-fade-in-up">
+                    About FlowGenius AI
+                </h1>
+                <p class="text-xl md:text-2xl opacity-90 animate-fade-in-up delay-200">
+                    Our story, mission, and the values that drive us.
+                </p>
+            </div>
+        </section>
+
+        <!-- Our Story/Mission Section -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 max-w-3xl text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                    Empowering SMBs with Intelligent Automation
+                </h2>
+                <p class="text-lg text-gray-700 mb-6">
+                    FlowGenius AI was founded with a clear vision: to democratize advanced AI-powered automation for small to medium-sized businesses. We believe that every business, regardless of size, deserves access to tools that can truly transform their operations, reduce manual overhead, and unlock significant growth potential.
+                </p>
+                <p class="text-lg text-gray-700 mb-6">
+                    Our journey began when our founders, frustrated by the complexity and high costs of enterprise-level automation solutions, realized a gaping need in the SMB market. They envisioned a platform that was not only powerful and intelligent but also incredibly easy to use – a no-code solution that anyone could master.
+                </p>
+                <p class="text-lg text-gray-700">
+                    Today, FlowGenius AI is the culmination of that vision, providing thousands of businesses with the ability to automate smarter and grow faster. We're constantly innovating, driven by our commitment to simplify complex processes and empower our users to achieve more.
+                </p>
+            </div>
+        </section>
+
+        <!-- Mission, Vision, Values Section -->
+        <section class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <!-- Our Mission -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-indigo-600 mb-4 flex justify-center">
+                            <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 13.5l1.65-.96C6.54 11.233 9.23 10.5 12 10.5c2.77 0 5.46.733 7.35 2.04L21 13.5m-3 0c-1.39-1.28-3.04-2.04-5-2.04s-3.61.76-5 2.04m-3 0V7a4 4 0 014-4h6a4 4 0 014 4v6.5"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Our Mission</h3>
+                        <p class="text-gray-600">
+                            To provide intuitive, accessible, and powerful AI-powered workflow automation solutions that enable small and medium businesses to maximize efficiency, reduce costs, and accelerate growth.
+                        </p>
+                    </div>
+
+                    <!-- Our Vision -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-purple-600 mb-4 flex justify-center">
+                            <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 002.944 12c.004 4.09 1.488 7.643 3.657 10.153a12.004 12.004 0 0014.898-10.153A12.001 12.001 0 0021.056 12z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Our Vision</h3>
+                        <p class="text-gray-600">
+                            To be the leading AI automation platform for SMBs globally, recognized for our innovation, reliability, and unwavering commitment to customer success.
+                        </p>
+                    </div>
+
+                    <!-- Our Values -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-green-600 mb-4 flex justify-center">
+                            <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Our Values</h3>
+                        <ul class="list-disc list-inside text-gray-600 text-left mx-auto md:mx-0 max-w-xs">
+                            <li>**Innovation:** Continuously evolving our platform.</li>
+                            <li>**Simplicity:** Making powerful tools easy to use.</li>
+                            <li>**Customer Success:** Your growth is our priority.</li>
+                            <li>**Integrity:** Building trust through transparency.</li>
+                            <li>**Impact:** Driving real, measurable results for businesses.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section (Consistent across relevant pages) -->
+        <section class="py-16 md:py-24 bg-gradient-to-r from-indigo-700 to-purple-700 text-white text-center">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Join the FlowGenius AI Family!</h2>
+                <p class="text-xl md:text-2xl mb-10 opacity-90">
+                    Discover how our passion for automation can fuel your business success.
+                </p>
+                <a href="/sign-in_out" class="bg-white text-indigo-700 px-8 py-4 rounded-full text-xl font-semibold hover:bg-gray-100 transition-all shadow-xl transform hover:-translate-y-1">
+                    Start Your Free Trial
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Consistent across pages) -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Company Info -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4 text-indigo-400">FlowGenius AI</h4>
+                <p class="text-gray-400">Automate Smarter. Grow Faster.</p>
+                <p class="text-gray-400 mt-2">&copy; 2025 FlowGenius AI. All rights reserved.</p>
+            </div>
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4 text-indigo-400">Quick Links</h4>
+                <ul>
+                    <li><a href="/features" class="text-gray-400 hover:text-white transition-colors">Features</a></li>
+                    <li><a href="/pricing" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
+                    <li><a href="/testimonials" class="text-gray-400 hover:text-white transition-colors">Testimonials</a></li>
+                    <li><a href="/blogs" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                </ul>
+            </div>
+            <!-- Support -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4 text-indigo-400">Support</h4>
+                <ul>
+                    <li><a href="/faqs" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+                    <li><a href="/contact-us" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+                </ul>
+            </div>
+            <!-- Social Media (Placeholder) -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4 text-indigo-400">Connect With Us</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.5 8h-2.5V8.5a.5.5 0 01.5-.5h2a.5.5 0 00.5-.5V6a.5.5 0 00-.5-.5h-2.5A3.5 3.5 0 009 8.5V10H7.5a.5.5 0 00-.5.5v2a.5.5 0 00.5.5h2.5V18a.5.5 0 00.5.5h2a.5.5 0 00.5-.5v-4h2.5a.5.5 0 00.5-.5v-2a.5.5 0 00-.5-.5z"></path></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.5 8h-2.5V8.5a.5.5 0 01.5-.5h2a.5.5 0 00.5-.5V6a.5.5 0 00-.5-.5h-2.5A3.5 3.5 0 009 8.5V10H7.5a.5.5 0 00-.5.5v2a.5.5 0 00.5.5h2.5V18a.5.5 0 00.5.5h2a.5.5 0 00.5-.5v-4h2.5a.5.5 0 00.5-.5v-2a.5.5 0 00-.5-.5z"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
