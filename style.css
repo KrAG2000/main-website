@@ -10,6 +10,10 @@ body {
     line-height: 1.6;
 }
 
+#root{
+    background: red;
+}
+
 /* Animations for Hero Section */
 @keyframes fadeInFromBottom {
     0% {
