@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Form Tracking Examples</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Tailwind gray-50 */
+        }
+        .form-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        .form-card:hover {
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .form-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #111827; /* Tailwind gray-900 */
+            border-bottom: 1px solid #e5e7eb; /* Tailwind gray-200 */
+        }
+        .form-description {
+            color: #4b5563; /* Tailwind gray-600 */
+        }
+        .input-label {
+            font-weight: 500;
+            color: #374151; /* Tailwind gray-700 */
+        }
+        .input-field {
+            width: 100%;
+            border: 1px solid #d1d5db; /* Tailwind gray-300 */
+            border-radius: 0.375rem;
+            padding: 0.625rem 0.875rem;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .input-field:focus {
+            outline: none;
+            border-color: #3b82f6; /* Tailwind blue-500 */
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.4);
+        }
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+        }
+        .btn-primary {
+            background-color: #2563eb; /* Tailwind blue-600 */
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #1d4ed8; /* Tailwind blue-700 */
+        }
+        .btn-secondary {
+            background-color: #e5e7eb; /* Tailwind gray-200 */
+            color: #1f2937; /* Tailwind gray-800 */
+        }
+        .btn-secondary:hover {
+            background-color: #d1d5db; /* Tailwind gray-300 */
+        }
+        .btn:active {
+            transform: scale(0.98);
+        }
+        .step-indicator {
+            font-size: 0.875rem;
+            color: #6b7280; /* Tailwind gray-500 */
+        }
+        /* NPS Radio styles */
+        .nps-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            border: 1px solid #d1d5db;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        .nps-label {
+            cursor: pointer;
+            padding: 0.75rem;
+            flex-grow: 1;
+            text-align: center;
+            transition: background-color 0.2s ease;
+            position: relative;
+            color: #374151;
+            border-left: 1px solid #e5e7eb;
+        }
+        .nps-label:first-child {
+            border-left: none;
+        }
+        .nps-label:hover {
+            background-color: #f3f4f6; /* gray-100 */
+        }
+        .nps-input {
+            display: none;
+        }
+        .nps-input:checked + .nps-label {
+            background-color: #3b82f6; /* blue-500 */
+            color: white;
+            font-weight: 700;
+        }
+
+    </style>
+    <script id="FRGM-tracker" src="http://localhost:3001/js-app/js/e50634dc-tracker.js" defer>
+    </script>
+</head>
+<body class="p-4 sm:p-6 md:p-8">
+
+    <div class="max-w-7xl mx-auto">
+        <header class="text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800"><span><a href="/" style="color: red">HOME : </a></span>Advanced Form Tracking Demonstrations</h1>
+            <p class="mt-2 text-lg text-gray-600">Three complex forms designed to track user interactions and funnel progression.</p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+
+            <!-- Form 1: Multi-Step Lead Qualification Form -->
+            <div id="form-lead-gen" class="form-card lg:col-span-1">
+                <div class="p-6">
+                    <h2 class="form-title pb-4">Request a Demo</h2>
+                    <p class="form-description mt-2">Let's find out how we can help you grow.</p>
+                </div>
+                <form id="lead-gen-multistep-form" class="p-6 pt-0">
+                    <!-- Step 1 -->
+                    <div id="lead-gen-step-1">
+                        <span class="step-indicator">Step 1 of 3</span>
+                        <div class="space-y-5 mt-2">
+                            <div>
+                                <label for="lead-gen-email" class="input-label block mb-1">Work Email</label>
+                                <input type="email" id="lead-gen-email" name="email" class="input-field" placeholder="you@company.com" required>
+                            </div>
+                            <div>
+                                <label for="lead-gen-company-name" class="input-label block mb-1">Company Name</label>
+                                <input type="text" id="lead-gen-company-name" name="company_name" class="input-field" placeholder="Your Company Inc.">
+                            </div>
+                            <div>
+                                <label for="lead-gen-company-size" class="input-label block mb-1">Company Size</label>
+                                <select id="lead-gen-company-size" name="company_size" class="input-field">
+                                    <option value="">Select an option</option>
+                                    <option value="1-10">1-10 employees</option>
+                                    <option value="11-50">11-50 employees</option>
+                                    <option value="51-200">51-200 employees</option>
+                                    <option value="201-1000">201-1,000 employees</option>
+                                    <option value="1001+">1,001+ employees</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="button" id="lead-gen-btn-next-1" class="btn btn-primary w-full mt-6">Next</button>
+                    </div>
+
+                    <!-- Step 2 (hidden by default) -->
+                    <div id="lead-gen-step-2" style="display: none;">
+                        <span class="step-indicator">Step 2 of 3</span>
+                        <div class="space-y-5 mt-2">
+                            <div>
+                                <label for="lead-gen-use-case" class="input-label block mb-1">Primary Use Case</label>
+                                <select id="lead-gen-use-case" name="use_case" class="input-field">
+                                    <option value="">Select a primary goal</option>
+                                    <option value="marketing-analytics">Marketing Analytics</option>
+                                    <option value="sales-automation">Sales Automation</option>
+                                    <option value="customer-support">Customer Support Efficiency</option>
+                                    <option value="operations">Streamline Operations</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="input-label block mb-1">Estimated Budget (Annual)</label>
+                                <div class="space-y-2 mt-2">
+                                    <div class="flex items-center"><input type="radio" id="budget-1" name="budget" value="<10k" class="mr-2"><label for="budget-1">Less than $10,000</label></div>
+                                    <div class="flex items-center"><input type="radio" id="budget-2" name="budget" value="10k-50k" class="mr-2"><label for="budget-2">$10,000 - $50,000</label></div>
+                                    <div class="flex items-center"><input type="radio" id="budget-3" name="budget" value=">50k" class="mr-2"><label for="budget-3">More than $50,000</label></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 mt-6">
+                            <button type="button" id="lead-gen-btn-back-1" class="btn btn-secondary w-1/3">Back</button>
+                            <button type="button" id="lead-gen-btn-next-2" class="btn btn-primary w-2/3">Next</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 (hidden by default) -->
+                    <div id="lead-gen-step-3" style="display: none;">
+                       <span class="step-indicator">Step 3 of 3</span>
+                       <div class="space-y-5 mt-2">
+                            <div>
+                                <label for="lead-gen-demo-date" class="input-label block mb-1">Preferred Demo Date</label>
+                                <input type="date" id="lead-gen-demo-date" name="demo_date" class="input-field">
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" id="lead-gen-consent" name="consent" class="h-4 w-4 rounded mr-3">
+                                <label for="lead-gen-consent" class="text-sm text-gray-600">I agree to the processing of my personal data as described in the <a href="#" class="text-blue-600 hover:underline">Privacy Policy</a>.</label>
+                            </div>
+                       </div>
+                       <div class="flex gap-4 mt-6">
+                            <button type="button" id="lead-gen-btn-back-2" class="btn btn-secondary w-1/3">Back</button>
+                            <button type="submit" id="lead-gen-btn-submit" class="btn btn-primary w-2/3">Request Demo</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Form 2: E-commerce Checkout Form -->
+            <div id="form-checkout" class="form-card lg:col-span-2">
+                <div class="p-6">
+                    <h2 class="form-title pb-4">Complete Your Order</h2>
+                    <p class="form-description mt-2">Just a few more details to get your items to you.</p>
+                </div>
+                <form id="checkout-form" class="grid grid-cols-1 md:grid-cols-2 gap-x-8 p-6 pt-0">
+                    <!-- Shipping Details -->
+                    <div class="md:col-span-1 space-y-5">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Shipping Information</h3>
+                        <div>
+                            <label for="checkout-email" class="input-label block mb-1">Email Address</label>
+                            <input type="email" id="checkout-email" name="email" class="input-field" placeholder="For order updates" required>
+                        </div>
+                        <div>
+                            <label for="checkout-address" class="input-label block mb-1">Street Address</label>
+                            <input type="text" id="checkout-address" name="address" class="input-field" placeholder="123 Main Street" required>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label for="checkout-city" class="input-label block mb-1">City</label>
+                                <input type="text" id="checkout-city" name="city" class="input-field" required>
+                            </div>
+                            <div>
+                                <label for="checkout-zip" class="input-label block mb-1">ZIP / Postal Code</label>
+                                <input type="text" id="checkout-zip" name="zip" class="input-field" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment & Summary -->
+                    <div class="md:col-span-1 mt-8 md:mt-0 space-y-5">
+                       <h3 class="text-lg font-semibold text-gray-800 mb-2">Payment Details</h3>
+                        <div>
+                            <label for="checkout-card-number" class="input-label block mb-1">Card Number</label>
+                            <input type="text" id="checkout-card-number" name="card_number" class="input-field" placeholder="•••• •••• •••• ••••" required>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                           <div>
+                                <label for="checkout-card-expiry" class="input-label block mb-1">Expiry</label>
+                                <input type="text" id="checkout-card-expiry" name="card_expiry" class="input-field" placeholder="MM / YY" required>
+                            </div>
+                            <div>
+                                <label for="checkout-card-cvc" class="input-label block mb-1">CVC</label>
+                                <input type="text" id="checkout-card-cvc" name="card_cvc" class="input-field" placeholder="123" required>
+                            </div>
+                        </div>
+                        
+                        <div class="pt-4 border-t border-gray-200">
+                             <h3 class="text-lg font-semibold text-gray-800 mb-2">Order Summary</h3>
+                             <div class="space-y-2 text-gray-600">
+                                 <div class="flex justify-between"><span>Pro Gadget</span><span>$799.00</span></div>
+                                 <div class="flex justify-between"><span>Standard Shipping</span><span>$0.00</span></div>
+                                 <div class="flex justify-between font-semibold text-gray-800 text-lg pt-2 border-t"><span >Total</span><span>$799.00</span></div>
+                             </div>
+                        </div>
+
+                         <div class="pt-4 space-y-3">
+                             <div class="flex items-center p-3 border border-gray-200 rounded-md hover:border-blue-500 transition">
+                                <input type="checkbox" id="checkout-upsell-shipping" name="upsell_shipping" class="h-5 w-5 rounded mr-3">
+                                <label for="checkout-upsell-shipping" class="text-sm"><strong>Upgrade:</strong> Add Expedited Shipping for $9.99</label>
+                            </div>
+                             <div class="flex items-center p-3 border border-gray-200 rounded-md hover:border-blue-500 transition">
+                                <input type="checkbox" id="checkout-upsell-gift" name="upsell_gift" class="h-5 w-5 rounded mr-3">
+                                <label for="checkout-upsell-gift" class="text-sm"><strong>Add-on:</strong> Gift wrap my order for $4.99</label>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="md:col-span-2 mt-8">
+                         <button type="submit" id="checkout-btn-submit" class="btn btn-primary w-full text-lg">Complete Purchase</button>
+                     </div>
+                </form>
+            </div>
+
+            <!-- Form 3: User Feedback & NPS Survey -->
+            <div id="form-feedback" class="form-card lg:col-span-3">
+                 <div class="p-6">
+                    <h2 class="form-title pb-4">Tell Us What You Think</h2>
+                    <p class="form-description mt-2">Your feedback helps us improve our product for everyone.</p>
+                </div>
+                <form id="feedback-form" class="p-6 pt-0 space-y-6">
+                    <div>
+                        <label class="input-label block mb-2 text-center">How likely are you to recommend us to a friend or colleague?</label>
+                        <div class="flex justify-between text-xs text-gray-500 px-2 mt-1">
+                            <span>Not at all likely</span>
+                            <span>Extremely likely</span>
+                        </div>
+                        <fieldset id="feedback-nps-score" class="nps-group">
+                             <input type="radio" id="nps-0" name="nps_score" value="0" class="nps-input"><label for="nps-0" class="nps-label">0</label>
+                             <input type="radio" id="nps-1" name="nps_score" value="1" class="nps-input"><label for="nps-1" class="nps-label">1</label>
+                             <input type="radio" id="nps-2" name="nps_score" value="2" class="nps-input"><label for="nps-2" class="nps-label">2</label>
+                             <input type="radio" id="nps-3" name="nps_score" value="3" class="nps-input"><label for="nps-3" class="nps-label">3</label>
+                             <input type="radio" id="nps-4" name="nps_score" value="4" class="nps-input"><label for="nps-4" class="nps-label">4</label>
+                             <input type="radio" id="nps-5" name="nps_score" value="5" class="nps-input"><label for="nps-5" class="nps-label">5</label>
+                             <input type="radio" id="nps-6" name="nps_score" value="6" class="nps-input"><label for="nps-6" class="nps-label">6</label>
+                             <input type="radio" id="nps-7" name="nps_score" value="7" class="nps-input"><label for="nps-7" class="nps-label">7</label>
+                             <input type="radio" id="nps-8" name="nps_score" value="8" class="nps-input"><label for="nps-8" class="nps-label">8</label>
+                             <input type="radio" id="nps-9" name="nps_score" value="9" class="nps-input"><label for="nps-9" class="nps-label">9</label>
+                             <input type="radio" id="nps-10" name="nps_score" value="10" class="nps-input"><label for="nps-10" class="nps-label">10</label>
+                        </fieldset>
+                    </div>
+                     <div>
+                        <label for="feedback-reason" class="input-label block mb-1">What is the main reason for your score?</label>
+                        <textarea id="feedback-reason" name="reason" rows="4" class="input-field" placeholder="Your honest feedback is appreciated..."></textarea>
+                    </div>
+                     <div>
+                        <label for="feedback-feature-usage" class="input-label block mb-1">Which feature do you use the most?</label>
+                        <select id="feedback-feature-usage" name="feature_usage" class="input-field">
+                            <option value="">Select a feature</option>
+                            <option value="dashboard-analytics">Dashboard Analytics</option>
+                            <option value="reporting-tool">Reporting Tool</option>
+                            <option value="user-management">User Management</option>
+                            <option value="api-integration">API Integration</option>
+                        </select>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" id="feedback-follow-up" name="follow_up" class="h-4 w-4 rounded mr-3">
+                        <label for="feedback-follow-up" class="text-sm text-gray-600">I'm willing to be contacted to provide more details about my feedback.</label>
+                    </div>
+                    <div>
+                         <button type="submit" id="feedback-btn-submit" class="btn btn-primary w-full md:w-auto">Submit Feedback</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for Multi-Step Form Logic
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('lead-gen-multistep-form');
+            if (!form) return;
+
+            const step1 = document.getElementById('lead-gen-step-1');
+            const step2 = document.getElementById('lead-gen-step-2');
+            const step3 = document.getElementById('lead-gen-step-3');
+
+            const next1 = document.getElementById('lead-gen-btn-next-1');
+            const next2 = document.getElementById('lead-gen-btn-next-2');
+            const back1 = document.getElementById('lead-gen-btn-back-1');
+            const back2 = document.getElementById('lead-gen-btn-back-2');
+            const submit = document.getElementById('lead-gen-btn-submit');
+            
+            // --- Event Listeners for Navigation ---
+            next1.addEventListener('click', function() {
+                // Simple validation example
+                const email = form.querySelector('#lead-gen-email');
+                if (email.checkValidity()) {
+                    step1.style.display = 'none';
+                    step2.style.display = 'block';
+                } else {
+                    email.reportValidity();
+                }
+            });
+
+            back1.addEventListener('click', function() {
+                step2.style.display = 'none';
+                step1.style.display = 'block';
+            });
+
+            next2.addEventListener('click', function() {
+                step2.style.display = 'none';
+                step3.style.display = 'block';
+            });
+            
+            back2.addEventListener('click', function() {
+                step3.style.display = 'none';
+                step2.style.display = 'block';
+            });
+
+            // Prevent default form submission for demonstration
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Lead Gen Form Submitted! (Submission prevented for this demo)');
+            });
+            document.getElementById('checkout-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Checkout Form Submitted! (Submission prevented for this demo)');
+            });
+            document.getElementById('feedback-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Feedback Form Submitted! (Submission prevented for this demo)');
+            });
+        });
+    </script>
+
+</body>
+</html>
