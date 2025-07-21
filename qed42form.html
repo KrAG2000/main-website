@@ -327,7 +327,7 @@
               -webkit-line-clamp: 2 !important;
               -webkit-box-orient: vertical !important;
             }
-          
+
             select {
               -webkit-appearance: none;
               -moz-appearance: none;
@@ -391,7 +391,7 @@
             .nav-link-wrap.header-main:hover a {
               color: var(--primary);
             }
-          
+
             .slick-list {
               overflow: visible !important;
             }
@@ -963,7 +963,8 @@
                   name="Form"
                   method="POST"
                   enctype="multipart/form-data"
-                  id="combinedForm"                >
+                  id="combinedForm"
+                >
                   <div class="contact-form_mobile-margin-top">
                     <div class="form-box">
                       <div class="cf-form_group">
@@ -1453,7 +1454,7 @@
             const currentPageUrl = window.location.href;
 
             $(window).resize(() =>
-              cursorElement.toggle(window.innerWidth > 991)
+              cursorElement.toggle(window.innerWidth > 991),
             );
             cursorElement.insertBefore(navbarLogoLeft);
 
@@ -1479,12 +1480,12 @@
               const yearCount = yearCountElement.text().trim();
 
               yearTextElement.text(
-                yearCount === "1" || yearCount === "0" ? "Year" : "Years"
+                yearCount === "1" || yearCount === "0" ? "Year" : "Years",
               );
             });
 
             $(".testimonial-slider, .slider-item, .work-slider").hover(() =>
-              $(".cursor_dot-1, .cursor_dot-2").toggleClass("is__larger")
+              $(".cursor_dot-1, .cursor_dot-2").toggleClass("is__larger"),
             );
             /*$('.casestudy-card---large, .casestudy-card---medium, a, .topic-row, .industry-filter-item, .nav-link-wrap, .filter-dropdown-toggle').hover(() => {
         $('.cursor_dot-1, .cursor_dot-2').toggleClass('is--card');
@@ -1493,7 +1494,7 @@
 
             // Select all elements with a class containing 'dynamic-menu-item-2'
             const elements = document.querySelectorAll(
-              '[class*="dynamic-menu-item-2"]'
+              '[class*="dynamic-menu-item-2"]',
             );
 
             // Set the display property of these elements to 'none'
@@ -1554,7 +1555,7 @@
               $(".read-time-container").each(function () {
                 // Find the .read-time-count and .read-time-text within the current container
                 var readTimeCount = parseInt(
-                  $(this).find(".read-time-count").text()
+                  $(this).find(".read-time-count").text(),
                 );
                 var readTimeText = $(this).find(".read-time-text");
 
@@ -1640,7 +1641,7 @@
           event.preventDefault();
 
           const enquiryType = document.querySelector(
-            'input[name="enquiryType"]:checked'
+            'input[name="enquiryType"]:checked',
           );
           if (!enquiryType) {
             formMessage.className = "error";

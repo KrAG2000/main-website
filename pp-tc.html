@@ -1,246 +1,426 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FlowGenius AI - Privacy Policy & Terms</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://main-website-scim.onrender.com/style.css">
-    <script id="FRGM-tracker" src="http://localhost:3001/js-app/js/workstation-v1-tracker.js" defer>
-    </script>
-</head>
+    <link
+      rel="stylesheet"
+      href="https://main-website-scim.onrender.com/style.css"
+    />
+    <script
+      id="FRGM-tracker"
+      src="http://localhost:3001/js-app/js/workstation-v1-tracker.js"
+      defer
+    ></script>
+  </head>
 
-<body class="font-inter antialiased bg-gray-50 text-gray-800">
-
+  <body class="font-inter antialiased bg-gray-50 text-gray-800">
     <!-- Header/Navigation Bar (Consistent across pages) -->
     <header class="bg-white shadow-sm py-4 fixed w-full z-50 rounded-b-lg">
-        <nav class="container mx-auto px-4 flex justify-between items-center">
-            <div class="flex items-center">
-                <!-- Logo and Site Name -->
-                <a href="/"
-                    class="flex items-center space-x-2 text-2xl font-bold text-indigo-700 hover:text-indigo-900 transition-colors">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M9.75 17L9.25 22 15 22 14.5 17M12 2v20"></path>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M12 12c-3.866 0-7 3.134-7 7s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7z"></path>
-                    </svg>
-                    <span>FlowGenius AI</span>
-                </a>
-            </div>
-            <!-- Navigation Links -->
-            <ul class="flex space-x-6 md:space-x-8">
-                <li><a href="/" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Home</a></li>
-                <li><a href="/features"
-                        class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Features</a></li>
-                <li><a href="/forms"
-                        class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Forms</a></li>
-                <li><a href="/pricing"
-                        class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Pricing</a></li>
-                <li><a href="/testimonials"
-                        class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Testimonials</a></li>
-                <li><a href="/about-us" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">About
-                        Us</a></li>
-                <li><a href="/blogs" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Blog</a>
-                </li>
-                <li><a href="/faqs"
-                        class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Support</a></li>
-                <li><a href="/contact-us"
-                        class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Contact</a></li>
-            </ul>
-            <!-- Auth Buttons -->
-            <div class="flex items-center space-x-4">
-                <a href="/sign-in_out"
-                    class="text-indigo-700 hover:text-indigo-900 font-medium transition-colors">Login</a>
-                <a href="/sign-in_out"
-                    class="bg-indigo-600 text-white px-5 py-2 rounded-full hover:bg-indigo-700 transition-colors shadow-lg transform hover:scale-105">Sign
-                    Up</a>
-            </div>
-        </nav>
+      <nav class="container mx-auto px-4 flex justify-between items-center">
+        <div class="flex items-center">
+          <!-- Logo and Site Name -->
+          <a
+            href="/"
+            class="flex items-center space-x-2 text-2xl font-bold text-indigo-700 hover:text-indigo-900 transition-colors"
+          >
+            <svg
+              class="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9.75 17L9.25 22 15 22 14.5 17M12 2v20"
+              ></path>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 12c-3.866 0-7 3.134-7 7s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7z"
+              ></path>
+            </svg>
+            <span>FlowGenius AI</span>
+          </a>
+        </div>
+        <!-- Navigation Links -->
+        <ul class="flex space-x-6 md:space-x-8">
+          <li>
+            <a
+              href="/"
+              class="text-gray-600 hover:text-indigo-700 font-medium transition-colors"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="/features"
+              class="text-gray-600 hover:text-indigo-700 font-medium transition-colors"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a
+              href="/forms"
+              class="text-gray-600 hover:text-indigo-700 font-medium transition-colors"
+              >Forms</a
+            >
+          </li>
+          <li>
+            <a
+              href="/pricing"
+              class="text-gray-600 hover:text-indigo-700 font-medium transition-colors"
+              >Pricing</a
+            >
+          </li>
+          <li>
+            <a
+              href="/testimonials"
+              class="text-gray-600 hover:text-indigo-700 font-medium transition-colors"
+              >Testimonials</a
+            >
+          </li>
+          <li>
+            <a
+              href="/about-us"
+              class="text-gray-600 hover:text-indigo-700 font-medium transition-colors"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="/blogs"
+              class="text-gray-600 hover:text-indigo-700 font-medium transition-colors"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a
+              href="/faqs"
+              class="text-gray-600 hover:text-indigo-700 font-medium transition-colors"
+              >Support</a
+            >
+          </li>
+          <li>
+            <a
+              href="/contact-us"
+              class="text-gray-600 hover:text-indigo-700 font-medium transition-colors"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <!-- Auth Buttons -->
+        <div class="flex items-center space-x-4">
+          <a
+            href="/sign-in_out"
+            class="text-indigo-700 hover:text-indigo-900 font-medium transition-colors"
+            >Login</a
+          >
+          <a
+            href="/sign-in_out"
+            class="bg-indigo-600 text-white px-5 py-2 rounded-full hover:bg-indigo-700 transition-colors shadow-lg transform hover:scale-105"
+            >Sign Up</a
+          >
+        </div>
+      </nav>
     </header>
 
-    <main class="pt-20"> <!-- Added pt-20 to account for fixed header -->
-        <!-- Hero Section for Legal Page -->
-        <section class="bg-gradient-to-r from-purple-500 to-indigo-500 text-white py-16 md:py-20 text-center">
-            <div class="container mx-auto px-4">
-                <h1 class="text-4xl md:text-5xl font-extrabold mb-4 animate-fade-in-up">
-                    Legal Information
-                </h1>
-                <p class="text-xl md:text-2xl opacity-90 animate-fade-in-up delay-200">
-                    Your privacy and our terms of service explained.
-                </p>
-            </div>
-        </section>
+    <main class="pt-20">
+      <!-- Added pt-20 to account for fixed header -->
+      <!-- Hero Section for Legal Page -->
+      <section
+        class="bg-gradient-to-r from-purple-500 to-indigo-500 text-white py-16 md:py-20 text-center"
+      >
+        <div class="container mx-auto px-4">
+          <h1
+            class="text-4xl md:text-5xl font-extrabold mb-4 animate-fade-in-up"
+          >
+            Legal Information
+          </h1>
+          <p
+            class="text-xl md:text-2xl opacity-90 animate-fade-in-up delay-200"
+          >
+            Your privacy and our terms of service explained.
+          </p>
+        </div>
+      </section>
 
-        <!-- Privacy Policy Section -->
-        <section id="privacy-policy" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-4 max-w-3xl">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
-                    Privacy Policy
-                </h2>
-                <p class="text-gray-700 mb-4">
-                    At FlowGenius AI, accessible from flowgeniusai.com, one of our main priorities is the privacy of our
-                    visitors. This Privacy Policy document contains types of information that is collected and recorded
-                    by FlowGenius AI and how we use it.
-                </p>
-                <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-6">Consent</h3>
-                <p class="text-gray-700 mb-4">
-                    By using our website, you hereby consent to our Privacy Policy and agree to its terms.
-                </p>
-                <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-6">Information we collect</h3>
-                <p class="text-gray-700 mb-4">
-                    The personal information that you are asked to provide, and the reasons why you are asked to provide
-                    it, will be made clear to you at the point we ask you to provide your personal information. If you
-                    contact us directly, we may receive additional information about you such as your name, email
-                    address, phone number, the contents of the message and/or attachments you may send us, and any other
-                    information you may choose to provide.
-                </p>
-                <p class="text-gray-700 mb-4">
-                    When you register for an Account, we may ask for your contact information, including items such as
-                    name, company name, address, email address, and telephone number.
-                </p>
-                <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-6">How we use your information</h3>
-                <p class="text-gray-700 mb-4">
-                    We use the information we collect in various ways, including to:
-                </p>
-                <ul class="list-disc list-inside text-gray-700 mb-6 space-y-2">
-                    <li>Provide, operate, and maintain our website</li>
-                    <li>Improve, personalize, and expand our website</li>
-                    <li>Understand and analyze how you use our website</li>
-                    <li>Develop new products, services, features, and functionality</li>
-                    <li>Communicate with you, either directly or through one of our partners, including for customer
-                        service, to provide you with updates and other information relating to the website, and for
-                        marketing and promotional purposes</li>
-                    <li>Send you emails</li>
-                    <li>Find and prevent fraud</li>
-                </ul>
-            </div>
-        </section>
+      <!-- Privacy Policy Section -->
+      <section id="privacy-policy" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-3xl">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center"
+          >
+            Privacy Policy
+          </h2>
+          <p class="text-gray-700 mb-4">
+            At FlowGenius AI, accessible from flowgeniusai.com, one of our main
+            priorities is the privacy of our visitors. This Privacy Policy
+            document contains types of information that is collected and
+            recorded by FlowGenius AI and how we use it.
+          </p>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-6">Consent</h3>
+          <p class="text-gray-700 mb-4">
+            By using our website, you hereby consent to our Privacy Policy and
+            agree to its terms.
+          </p>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-6">
+            Information we collect
+          </h3>
+          <p class="text-gray-700 mb-4">
+            The personal information that you are asked to provide, and the
+            reasons why you are asked to provide it, will be made clear to you
+            at the point we ask you to provide your personal information. If you
+            contact us directly, we may receive additional information about you
+            such as your name, email address, phone number, the contents of the
+            message and/or attachments you may send us, and any other
+            information you may choose to provide.
+          </p>
+          <p class="text-gray-700 mb-4">
+            When you register for an Account, we may ask for your contact
+            information, including items such as name, company name, address,
+            email address, and telephone number.
+          </p>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-6">
+            How we use your information
+          </h3>
+          <p class="text-gray-700 mb-4">
+            We use the information we collect in various ways, including to:
+          </p>
+          <ul class="list-disc list-inside text-gray-700 mb-6 space-y-2">
+            <li>Provide, operate, and maintain our website</li>
+            <li>Improve, personalize, and expand our website</li>
+            <li>Understand and analyze how you use our website</li>
+            <li>Develop new products, services, features, and functionality</li>
+            <li>
+              Communicate with you, either directly or through one of our
+              partners, including for customer service, to provide you with
+              updates and other information relating to the website, and for
+              marketing and promotional purposes
+            </li>
+            <li>Send you emails</li>
+            <li>Find and prevent fraud</li>
+          </ul>
+        </div>
+      </section>
 
-        <!-- Terms & Conditions Section -->
-        <section id="terms-conditions" class="py-16 md:py-24 bg-gray-100">
-            <div class="container mx-auto px-4 max-w-3xl">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
-                    Terms & Conditions
-                </h2>
-                <p class="text-gray-700 mb-4">
-                    Welcome to FlowGenius AI! These terms and conditions outline the rules and regulations for the use
-                    of FlowGenius AI's Website, located at flowgeniusai.com.
-                </p>
-                <p class="text-gray-700 mb-4">
-                    By accessing this website we assume you accept these terms and conditions. Do not continue to use
-                    FlowGenius AI if you do not agree to take all of the terms and conditions stated on this page.
-                </p>
-                <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-6">Cookies</h3>
-                <p class="text-gray-700 mb-4">
-                    We employ the use of cookies. By accessing FlowGenius AI, you agreed to use cookies in agreement
-                    with the FlowGenius AI's Privacy Policy. Most interactive websites use cookies to let us retrieve
-                    the user's details for each visit. Cookies are used by our website to enable the functionality of
-                    certain areas to make it easier for people visiting our website. Some of our affiliate/advertising
-                    partners may also use cookies.
-                </p>
-                <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-6">License</h3>
-                <p class="text-gray-700 mb-4">
-                    Unless otherwise stated, FlowGenius AI and/or its licensors own the intellectual property rights for
-                    all material on FlowGenius AI. All intellectual property rights are reserved. You may access this
-                    from FlowGenius AI for your own personal use subjected to restrictions set in these terms and
-                    conditions.
-                </p>
-                <ul class="list-disc list-inside text-gray-700 mb-6 space-y-2">
-                    <li>Republish material from FlowGenius AI</li>
-                    <li>Sell, rent or sub-license material from FlowGenius AI</li>
-                    <li>Reproduce, duplicate or copy material from FlowGenius AI</li>
-                    <li>Redistribute content from FlowGenius AI</li>
-                </ul>
-                <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-6">Hyperlinking to our Content</h3>
-                <p class="text-gray-700 mb-4">
-                    The following organizations may link to our Website without prior written approval:
-                </p>
-                <ul class="list-disc list-inside text-gray-700 mb-6 space-y-2">
-                    <li>Government agencies;</li>
-                    <li>Search engines;</li>
-                    <li>News organizations;</li>
-                    <li>Online directory distributors may link to our Website in the same manner as they hyperlink to
-                        the Websites of other listed businesses; and</li>
-                    <li>System wide Accredited Businesses except soliciting non-profit organizations, charity shopping
-                        malls, and charity fundraising groups which may not hyperlink to our Web site.</li>
-                </ul>
-                <p class="text-gray-700 mb-4">
-                    We may consider and approve other link requests from the following types of organizations:
-                </p>
-                <ul class="list-disc list-inside text-gray-700 mb-6 space-y-2">
-                    <li>commonly-known consumer and/or business information sources;</li>
-                    <li>dot.com community sites;</li>
-                    <li>associations or other groups representing charities;</li>
-                    <li>online directory distributors;</li>
-                    <li>internet portals;</li>
-                    <li>accounting, law and consulting firms; and</li>
-                    <li>educational institutions and trade associations.</li>
-                </ul>
-            </div>
-        </section>
+      <!-- Terms & Conditions Section -->
+      <section id="terms-conditions" class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-4 max-w-3xl">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center"
+          >
+            Terms & Conditions
+          </h2>
+          <p class="text-gray-700 mb-4">
+            Welcome to FlowGenius AI! These terms and conditions outline the
+            rules and regulations for the use of FlowGenius AI's Website,
+            located at flowgeniusai.com.
+          </p>
+          <p class="text-gray-700 mb-4">
+            By accessing this website we assume you accept these terms and
+            conditions. Do not continue to use FlowGenius AI if you do not agree
+            to take all of the terms and conditions stated on this page.
+          </p>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-6">Cookies</h3>
+          <p class="text-gray-700 mb-4">
+            We employ the use of cookies. By accessing FlowGenius AI, you agreed
+            to use cookies in agreement with the FlowGenius AI's Privacy Policy.
+            Most interactive websites use cookies to let us retrieve the user's
+            details for each visit. Cookies are used by our website to enable
+            the functionality of certain areas to make it easier for people
+            visiting our website. Some of our affiliate/advertising partners may
+            also use cookies.
+          </p>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-6">License</h3>
+          <p class="text-gray-700 mb-4">
+            Unless otherwise stated, FlowGenius AI and/or its licensors own the
+            intellectual property rights for all material on FlowGenius AI. All
+            intellectual property rights are reserved. You may access this from
+            FlowGenius AI for your own personal use subjected to restrictions
+            set in these terms and conditions.
+          </p>
+          <ul class="list-disc list-inside text-gray-700 mb-6 space-y-2">
+            <li>Republish material from FlowGenius AI</li>
+            <li>Sell, rent or sub-license material from FlowGenius AI</li>
+            <li>Reproduce, duplicate or copy material from FlowGenius AI</li>
+            <li>Redistribute content from FlowGenius AI</li>
+          </ul>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-6">
+            Hyperlinking to our Content
+          </h3>
+          <p class="text-gray-700 mb-4">
+            The following organizations may link to our Website without prior
+            written approval:
+          </p>
+          <ul class="list-disc list-inside text-gray-700 mb-6 space-y-2">
+            <li>Government agencies;</li>
+            <li>Search engines;</li>
+            <li>News organizations;</li>
+            <li>
+              Online directory distributors may link to our Website in the same
+              manner as they hyperlink to the Websites of other listed
+              businesses; and
+            </li>
+            <li>
+              System wide Accredited Businesses except soliciting non-profit
+              organizations, charity shopping malls, and charity fundraising
+              groups which may not hyperlink to our Web site.
+            </li>
+          </ul>
+          <p class="text-gray-700 mb-4">
+            We may consider and approve other link requests from the following
+            types of organizations:
+          </p>
+          <ul class="list-disc list-inside text-gray-700 mb-6 space-y-2">
+            <li>
+              commonly-known consumer and/or business information sources;
+            </li>
+            <li>dot.com community sites;</li>
+            <li>associations or other groups representing charities;</li>
+            <li>online directory distributors;</li>
+            <li>internet portals;</li>
+            <li>accounting, law and consulting firms; and</li>
+            <li>educational institutions and trade associations.</li>
+          </ul>
+        </div>
+      </section>
     </main>
 
     <!-- Footer (Consistent across pages) -->
     <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-            <!-- Company Info -->
-            <div>
-                <h4 class="text-lg font-semibold mb-4 text-indigo-400">FlowGenius AI</h4>
-                <p class="text-gray-400">Automate Smarter. Grow Faster.</p>
-                <p class="text-gray-400 mt-2">&copy; 2025 FlowGenius AI. All rights reserved.</p>
-            </div>
-            <!-- Quick Links -->
-            <div>
-                <h4 class="text-lg font-semibold mb-4 text-indigo-400">Quick Links</h4>
-                <ul>
-                    <li><a href="/features" class="text-gray-400 hover:text-white transition-colors">Features</a></li>
-                    <li><a href="/pricing" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
-                    <li><a href="/testimonials"
-                            class="text-gray-400 hover:text-white transition-colors">Testimonials</a></li>
-                    <li><a href="/blogs" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
-                </ul>
-            </div>
-            <!-- Support -->
-            <div>
-                <h4 class="text-lg font-semibold mb-4 text-indigo-400">Support</h4>
-                <ul>
-                    <li><a href="/faqs" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
-                    <li><a href="/contact-us" class="text-gray-400 hover:text-white transition-colors">Contact Us</a>
-                    </li>
-                    <li><a href="/pp-tc" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
-                    </li>
-                    <li><a href="/pp-tc" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- Social Media (Placeholder) -->
-            <div>
-                <h4 class="text-lg font-semibold mb-4 text-indigo-400">Connect With Us</h4>
-                <div class="flex space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.5 8h-2.5V8.5a.5.5 0 01.5-.5h2a.5.5 0 00.5-.5V6a.5.5 0 00-.5-.5h-2.5A3.5 3.5 0 009 8.5V10H7.5a.5.5 0 00-.5.5v2a.5.5 0 00.5.5h2.5V18a.5.5 0 00.5.5h2a.5.5 0 00.5-.5v-4h2.5a.5.5 0 00.5-.5v-2a.5.5 0 00-.5-.5z">
-                            </path>
-                        </svg>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.5 8h-2.5V8.5a.5.5 0 01.5-.5h2a.5.5 0 00.5-.5V6a.5.5 0 00-.5-.5h-2.5A3.5 3.5 0 009 8.5V10H7.5a.5.5 0 00-.5.5v2a.5.5 0 00.5.5h2.5V18a.5.5 0 00.5.5h2a.5.5 0 00.5-.5v-4h2.5a.5.5 0 00.5-.5v-2a.5.5 0 00-.5-.5z">
-                            </path>
-                        </svg>
-                    </a>
-                </div>
-            </div>
+      <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Company Info -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-indigo-400">
+            FlowGenius AI
+          </h4>
+          <p class="text-gray-400">Automate Smarter. Grow Faster.</p>
+          <p class="text-gray-400 mt-2">
+            &copy; 2025 FlowGenius AI. All rights reserved.
+          </p>
         </div>
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-indigo-400">
+            Quick Links
+          </h4>
+          <ul>
+            <li>
+              <a
+                href="/features"
+                class="text-gray-400 hover:text-white transition-colors"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a
+                href="/pricing"
+                class="text-gray-400 hover:text-white transition-colors"
+                >Pricing</a
+              >
+            </li>
+            <li>
+              <a
+                href="/testimonials"
+                class="text-gray-400 hover:text-white transition-colors"
+                >Testimonials</a
+              >
+            </li>
+            <li>
+              <a
+                href="/blogs"
+                class="text-gray-400 hover:text-white transition-colors"
+                >Blog</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- Support -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-indigo-400">Support</h4>
+          <ul>
+            <li>
+              <a
+                href="/faqs"
+                class="text-gray-400 hover:text-white transition-colors"
+                >FAQ</a
+              >
+            </li>
+            <li>
+              <a
+                href="/contact-us"
+                class="text-gray-400 hover:text-white transition-colors"
+                >Contact Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="/pp-tc"
+                class="text-gray-400 hover:text-white transition-colors"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a
+                href="/pp-tc"
+                class="text-gray-400 hover:text-white transition-colors"
+                >Terms of Service</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- Social Media (Placeholder) -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-indigo-400">
+            Connect With Us
+          </h4>
+          <div class="flex space-x-4">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.5 8h-2.5V8.5a.5.5 0 01.5-.5h2a.5.5 0 00.5-.5V6a.5.5 0 00-.5-.5h-2.5A3.5 3.5 0 009 8.5V10H7.5a.5.5 0 00-.5.5v2a.5.5 0 00.5.5h2.5V18a.5.5 0 00.5.5h2a.5.5 0 00.5-.5v-4h2.5a.5.5 0 00.5-.5v-2a.5.5 0 00-.5-.5z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.5 8h-2.5V8.5a.5.5 0 01.5-.5h2a.5.5 0 00.5-.5V6a.5.5 0 00-.5-.5h-2.5A3.5 3.5 0 009 8.5V10H7.5a.5.5 0 00-.5.5v2a.5.5 0 00.5.5h2.5V18a.5.5 0 00.5.5h2a.5.5 0 00.5-.5v-4h2.5a.5.5 0 00.5-.5v-2a.5.5 0 00-.5-.5z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
     </footer>
-
-</body>
-
+  </body>
 </html>

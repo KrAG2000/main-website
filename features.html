@@ -1,271 +1,506 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FlowGenius AI - Features</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://main-website-scim.onrender.com/style.css">
-    <script id="FRGM-tracker" src="http://localhost:3001/js-app/js/workstation-v1-tracker.js" defer>
-    </script>
-</head>
+    <link
+      rel="stylesheet"
+      href="https://main-website-scim.onrender.com/style.css"
+    />
+    <script
+      id="FRGM-tracker"
+      src="http://localhost:3001/js-app/js/workstation-v1-tracker.js"
+      defer
+    ></script>
+  </head>
 
-<body class="font-inter antialiased bg-gray-50 text-gray-800">
-
+  <body class="font-inter antialiased bg-gray-50 text-gray-800">
     <!-- Header/Navigation Bar (Consistent across pages) -->
     <header class="bg-white shadow-sm py-4 fixed w-full z-50 rounded-b-lg">
-        <nav class="container mx-auto px-4 flex justify-between items-center">
-            <div class="flex items-center">
-                <!-- Logo and Site Name -->
-                <a href="/"
-                    class="flex items-center space-x-2 text-2xl font-bold text-indigo-700 hover:text-indigo-900 transition-colors">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M9.75 17L9.25 22 15 22 14.5 17M12 2v20"></path>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M12 12c-3.866 0-7 3.134-7 7s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7z"></path>
-                    </svg>
-                    <span>FlowGenius AI</span>
-                </a>
-            </div>
-            <!-- Navigation Links -->
-            <ul class="flex space-x-6 md:space-x-8">
-                <li><a href="/" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Home</a></li>
-                <li><a href="/features" class="text-indigo-700 font-medium transition-colors">Features</a></li>
-                <li><a href="/forms"
-                        class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Forms</a></li>
-                <li><a href="/pricing"
-                        class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Pricing</a></li>
-                <li><a href="/testimonials"
-                        class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Testimonials</a></li>
-                <li><a href="/about-us" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">About
-                        Us</a></li>
-                <li><a href="/blogs" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Blog</a>
-                </li>
-                <li><a href="/faqs"
-                        class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Support</a></li>
-                <li><a href="/contact-us"
-                        class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Contact</a></li>
-            </ul>
-            <!-- Auth Buttons -->
-            <div class="flex items-center space-x-4">
-                <a href="/sign-in_out"
-                    class="text-indigo-700 hover:text-indigo-900 font-medium transition-colors">Login</a>
-                <a href="/sign-in_out"
-                    class="bg-indigo-600 text-white px-5 py-2 rounded-full hover:bg-indigo-700 transition-colors shadow-lg transform hover:scale-105">Sign
-                    Up</a>
-            </div>
-        </nav>
+      <nav class="container mx-auto px-4 flex justify-between items-center">
+        <div class="flex items-center">
+          <!-- Logo and Site Name -->
+          <a
+            href="/"
+            class="flex items-center space-x-2 text-2xl font-bold text-indigo-700 hover:text-indigo-900 transition-colors"
+          >
+            <svg
+              class="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9.75 17L9.25 22 15 22 14.5 17M12 2v20"
+              ></path>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 12c-3.866 0-7 3.134-7 7s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7z"
+              ></path>
+            </svg>
+            <span>FlowGenius AI</span>
+          </a>
+        </div>
+        <!-- Navigation Links -->
+        <ul class="flex space-x-6 md:space-x-8">
+          <li>
+            <a
+              href="/"
+              class="text-gray-600 hover:text-indigo-700 font-medium transition-colors"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="/features"
+              class="text-indigo-700 font-medium transition-colors"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a
+              href="/forms"
+              class="text-gray-600 hover:text-indigo-700 font-medium transition-colors"
+              >Forms</a
+            >
+          </li>
+          <li>
+            <a
+              href="/pricing"
+              class="text-gray-600 hover:text-indigo-700 font-medium transition-colors"
+              >Pricing</a
+            >
+          </li>
+          <li>
+            <a
+              href="/testimonials"
+              class="text-gray-600 hover:text-indigo-700 font-medium transition-colors"
+              >Testimonials</a
+            >
+          </li>
+          <li>
+            <a
+              href="/about-us"
+              class="text-gray-600 hover:text-indigo-700 font-medium transition-colors"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="/blogs"
+              class="text-gray-600 hover:text-indigo-700 font-medium transition-colors"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a
+              href="/faqs"
+              class="text-gray-600 hover:text-indigo-700 font-medium transition-colors"
+              >Support</a
+            >
+          </li>
+          <li>
+            <a
+              href="/contact-us"
+              class="text-gray-600 hover:text-indigo-700 font-medium transition-colors"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <!-- Auth Buttons -->
+        <div class="flex items-center space-x-4">
+          <a
+            href="/sign-in_out"
+            class="text-indigo-700 hover:text-indigo-900 font-medium transition-colors"
+            >Login</a
+          >
+          <a
+            href="/sign-in_out"
+            class="bg-indigo-600 text-white px-5 py-2 rounded-full hover:bg-indigo-700 transition-colors shadow-lg transform hover:scale-105"
+            >Sign Up</a
+          >
+        </div>
+      </nav>
     </header>
 
-    <main class="pt-20"> <!-- Added pt-20 to account for fixed header -->
-        <!-- Hero Section for Features Page -->
-        <section class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-16 md:py-20 text-center">
-            <div class="container mx-auto px-4">
-                <h1 class="text-4xl md:text-5xl font-extrabold mb-4 animate-fade-in-up">
-                    Are kya baat hai
-                </h1>
-                <p class="text-xl md:text-2xl opacity-90 animate-fade-in-up delay-200">
-                    Discover how FlowGenius AI empowers your business with intelligent, efficient workflows.
-                </p>
+    <main class="pt-20">
+      <!-- Added pt-20 to account for fixed header -->
+      <!-- Hero Section for Features Page -->
+      <section
+        class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-16 md:py-20 text-center"
+      >
+        <div class="container mx-auto px-4">
+          <h1
+            class="text-4xl md:text-5xl font-extrabold mb-4 animate-fade-in-up"
+          >
+            Are kya baat hai
+          </h1>
+          <p
+            class="text-xl md:text-2xl opacity-90 animate-fade-in-up delay-200"
+          >
+            Discover how FlowGenius AI empowers your business with intelligent,
+            efficient workflows.
+          </p>
+        </div>
+      </section>
+
+      <!-- Main Features Grid -->
+      <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- Feature Item 1: Intuitive Workflow Builder -->
+            <div
+              class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform hover:scale-105 transition-transform duration-300 group"
+            >
+              <div class="text-indigo-600 mb-4 flex justify-center">
+                <svg
+                  class="w-16 h-16"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="text-2xl font-semibold text-gray-900 mb-3 text-center group-hover:text-indigo-700"
+              >
+                Intuitive Workflow Builder
+              </h3>
+              <p class="text-gray-600 text-center">
+                Design and automate complex processes with our easy-to-use
+                drag-and-drop interface. No coding, no hassle.
+              </p>
             </div>
-        </section>
 
-        <!-- Main Features Grid -->
-        <section class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <!-- Feature Item 1: Intuitive Workflow Builder -->
-                    <div
-                        class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform hover:scale-105 transition-transform duration-300 group">
-                        <div class="text-indigo-600 mb-4 flex justify-center">
-                            <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01">
-                                </path>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-3 text-center group-hover:text-indigo-700">
-                            Intuitive Workflow Builder</h3>
-                        <p class="text-gray-600 text-center">
-                            Design and automate complex processes with our easy-to-use drag-and-drop interface. No
-                            coding, no hassle.
-                        </p>
-                    </div>
-
-                    <!-- Feature Item 2: AI-Powered Task Prediction -->
-                    <div
-                        class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform hover:scale-105 transition-transform duration-300 group">
-                        <div class="text-indigo-600 mb-4 flex justify-center">
-                            <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m1.414 16l.707-.707M10 21h4m-7.485-3.343l-.707.707M5.657 18.343a2 2 0 102.828 2.828L15 10.828V12a2 2 0 102 2h2a2 2 0 102-2h-1M12 6a4 4 0 100 8 4 4 0 000-8z">
-                                </path>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-3 text-center group-hover:text-indigo-700">
-                            AI-Powered Task Prediction</h3>
-                        <p class="text-gray-600 text-center">
-                            Our intelligent algorithms learn your patterns and suggest next steps, optimizing your
-                            workflows automatically.
-                        </p>
-                    </div>
-
-                    <!-- Feature Item 3: Seamless Integrations -->
-                    <div
-                        class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform hover:scale-105 transition-transform duration-300 group">
-                        <div class="text-indigo-600 mb-4 flex justify-center">
-                            <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 6V4m0 2a2 2 0 100 4m0-4h.01M6 18H4m2 0a2 2 0 100 4m0-4h.01M18 18h-2m2 0a2 2 0 100 4m0-4h.01M6 6h-2m2 0a2 2 0 100 4m0-4h.01">
-                                </path>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-3 text-center group-hover:text-indigo-700">
-                            Seamless Integrations</h3>
-                        <p class="text-gray-600 text-center">
-                            Connect with your favorite business apps (CRM, accounting, communication) to create
-                            end-to-end automation.
-                        </p>
-                    </div>
-
-                    <!-- Feature Item 4: Real-time Analytics & Reporting -->
-                    <div
-                        class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform hover:scale-105 transition-transform duration-300 group">
-                        <div class="text-indigo-600 mb-4 flex justify-center">
-                            <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-3 text-center group-hover:text-indigo-700">
-                            Real-time Analytics & Reporting</h3>
-                        <p class="text-gray-600 text-center">
-                            Gain insights into your automated processes with comprehensive dashboards and performance
-                            reports.
-                        </p>
-                    </div>
-
-                    <!-- Feature Item 5: Secure & Reliable -->
-                    <div
-                        class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform hover:scale-105 transition-transform duration-300 group">
-                        <div class="text-indigo-600 mb-4 flex justify-center">
-                            <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
-                                </path>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-3 text-center group-hover:text-indigo-700">
-                            Secure & Reliable</h3>
-                        <p class="text-gray-600 text-center">
-                            Your data and workflows are protected with enterprise-grade security measures and reliable
-                            uptime.
-                        </p>
-                    </div>
-
-                    <!-- Feature Item 6: Customizable Templates -->
-                    <div
-                        class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform hover:scale-105 transition-transform duration-300 group">
-                        <div class="text-indigo-600 mb-4 flex justify-center">
-                            <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
-                                </path>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-3 text-center group-hover:text-indigo-700">
-                            Customizable Templates</h3>
-                        <p class="text-gray-600 text-center">
-                            Get started quickly with a library of pre-built, customizable automation templates for
-                            common business scenarios.
-                        </p>
-                    </div>
-                </div>
+            <!-- Feature Item 2: AI-Powered Task Prediction -->
+            <div
+              class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform hover:scale-105 transition-transform duration-300 group"
+            >
+              <div class="text-indigo-600 mb-4 flex justify-center">
+                <svg
+                  class="w-16 h-16"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m1.414 16l.707-.707M10 21h4m-7.485-3.343l-.707.707M5.657 18.343a2 2 0 102.828 2.828L15 10.828V12a2 2 0 102 2h2a2 2 0 102-2h-1M12 6a4 4 0 100 8 4 4 0 000-8z"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="text-2xl font-semibold text-gray-900 mb-3 text-center group-hover:text-indigo-700"
+              >
+                AI-Powered Task Prediction
+              </h3>
+              <p class="text-gray-600 text-center">
+                Our intelligent algorithms learn your patterns and suggest next
+                steps, optimizing your workflows automatically.
+              </p>
             </div>
-        </section>
 
-        <!-- Call to Action Section (Consistent across relevant pages) -->
-        <section class="py-16 md:py-24 bg-gradient-to-r from-indigo-700 to-purple-700 text-white text-center">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">Experience the Future of Business Automation!</h2>
-                <p class="text-xl md:text-2xl mb-10 opacity-90">
-                    Explore all features and see how FlowGenius AI can revolutionize your operations.
-                </p>
-                <a href="/sign-in_out"
-                    class="bg-white text-indigo-700 px-8 py-4 rounded-full text-xl font-semibold hover:bg-gray-100 transition-all shadow-xl transform hover:-translate-y-1">
-                    Start Your Free Trial
-                </a>
+            <!-- Feature Item 3: Seamless Integrations -->
+            <div
+              class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform hover:scale-105 transition-transform duration-300 group"
+            >
+              <div class="text-indigo-600 mb-4 flex justify-center">
+                <svg
+                  class="w-16 h-16"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 6V4m0 2a2 2 0 100 4m0-4h.01M6 18H4m2 0a2 2 0 100 4m0-4h.01M18 18h-2m2 0a2 2 0 100 4m0-4h.01M6 6h-2m2 0a2 2 0 100 4m0-4h.01"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="text-2xl font-semibold text-gray-900 mb-3 text-center group-hover:text-indigo-700"
+              >
+                Seamless Integrations
+              </h3>
+              <p class="text-gray-600 text-center">
+                Connect with your favorite business apps (CRM, accounting,
+                communication) to create end-to-end automation.
+              </p>
             </div>
-        </section>
+
+            <!-- Feature Item 4: Real-time Analytics & Reporting -->
+            <div
+              class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform hover:scale-105 transition-transform duration-300 group"
+            >
+              <div class="text-indigo-600 mb-4 flex justify-center">
+                <svg
+                  class="w-16 h-16"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="text-2xl font-semibold text-gray-900 mb-3 text-center group-hover:text-indigo-700"
+              >
+                Real-time Analytics & Reporting
+              </h3>
+              <p class="text-gray-600 text-center">
+                Gain insights into your automated processes with comprehensive
+                dashboards and performance reports.
+              </p>
+            </div>
+
+            <!-- Feature Item 5: Secure & Reliable -->
+            <div
+              class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform hover:scale-105 transition-transform duration-300 group"
+            >
+              <div class="text-indigo-600 mb-4 flex justify-center">
+                <svg
+                  class="w-16 h-16"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="text-2xl font-semibold text-gray-900 mb-3 text-center group-hover:text-indigo-700"
+              >
+                Secure & Reliable
+              </h3>
+              <p class="text-gray-600 text-center">
+                Your data and workflows are protected with enterprise-grade
+                security measures and reliable uptime.
+              </p>
+            </div>
+
+            <!-- Feature Item 6: Customizable Templates -->
+            <div
+              class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform hover:scale-105 transition-transform duration-300 group"
+            >
+              <div class="text-indigo-600 mb-4 flex justify-center">
+                <svg
+                  class="w-16 h-16"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="text-2xl font-semibold text-gray-900 mb-3 text-center group-hover:text-indigo-700"
+              >
+                Customizable Templates
+              </h3>
+              <p class="text-gray-600 text-center">
+                Get started quickly with a library of pre-built, customizable
+                automation templates for common business scenarios.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action Section (Consistent across relevant pages) -->
+      <section
+        class="py-16 md:py-24 bg-gradient-to-r from-indigo-700 to-purple-700 text-white text-center"
+      >
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Experience the Future of Business Automation!
+          </h2>
+          <p class="text-xl md:text-2xl mb-10 opacity-90">
+            Explore all features and see how FlowGenius AI can revolutionize
+            your operations.
+          </p>
+          <a
+            href="/sign-in_out"
+            class="bg-white text-indigo-700 px-8 py-4 rounded-full text-xl font-semibold hover:bg-gray-100 transition-all shadow-xl transform hover:-translate-y-1"
+          >
+            Start Your Free Trial
+          </a>
+        </div>
+      </section>
     </main>
 
     <!-- Footer (Consistent across pages) -->
     <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-            <!-- Company Info -->
-            <div>
-                <h4 class="text-lg font-semibold mb-4 text-indigo-400">FlowGenius AI</h4>
-                <p class="text-gray-400">Automate Smarter. Grow Faster.</p>
-                <p class="text-gray-400 mt-2">&copy; 2025 FlowGenius AI. All rights reserved.</p>
-            </div>
-            <!-- Quick Links -->
-            <div>
-                <h4 class="text-lg font-semibold mb-4 text-indigo-400">Quick Links</h4>
-                <ul>
-                    <li><a href="/features" class="text-gray-400 hover:text-white transition-colors">Features</a></li>
-                    <li><a href="/pricing" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
-                    <li><a href="/testimonials"
-                            class="text-gray-400 hover:text-white transition-colors">Testimonials</a></li>
-                    <li><a href="/blogs" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
-                </ul>
-            </div>
-            <!-- Support -->
-            <div>
-                <h4 class="text-lg font-semibold mb-4 text-indigo-400">Support</h4>
-                <ul>
-                    <li><a href="/faqs" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
-                    <li><a href="/contact-us" class="text-gray-400 hover:text-white transition-colors">Contact Us</a>
-                    </li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
-                </ul>
-            </div>
-            <!-- Social Media (Placeholder) -->
-            <div>
-                <h4 class="text-lg font-semibold mb-4 text-indigo-400">Connect With Us</h4>
-                <div class="flex space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.5 8h-2.5V8.5a.5.5 0 01.5-.5h2a.5.5 0 00.5-.5V6a.5.5 0 00-.5-.5h-2.5A3.5 3.5 0 009 8.5V10H7.5a.5.5 0 00-.5.5v2a.5.5 0 00.5.5h2.5V18a.5.5 0 00.5.5h2a.5.5 0 00.5-.5v-4h2.5a.5.5 0 00.5-.5v-2a.5.5 0 00-.5-.5z">
-                            </path>
-                        </svg>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.5 8h-2.5V8.5a.5.5 0 01.5-.5h2a.5.5 0 00.5-.5V6a.5.5 0 00-.5-.5h-2.5A3.5 3.5 0 009 8.5V10H7.5a.5.5 0 00-.5.5v2a.5.5 0 00.5.5h2.5V18a.5.5 0 00.5.5h2a.5.5 0 00.5-.5v-4h2.5a.5.5 0 00.5-.5v-2a.5.5 0 00-.5-.5z">
-                            </path>
-                        </svg>
-                    </a>
-                </div>
-            </div>
+      <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Company Info -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-indigo-400">
+            FlowGenius AI
+          </h4>
+          <p class="text-gray-400">Automate Smarter. Grow Faster.</p>
+          <p class="text-gray-400 mt-2">
+            &copy; 2025 FlowGenius AI. All rights reserved.
+          </p>
         </div>
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-indigo-400">
+            Quick Links
+          </h4>
+          <ul>
+            <li>
+              <a
+                href="/features"
+                class="text-gray-400 hover:text-white transition-colors"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a
+                href="/pricing"
+                class="text-gray-400 hover:text-white transition-colors"
+                >Pricing</a
+              >
+            </li>
+            <li>
+              <a
+                href="/testimonials"
+                class="text-gray-400 hover:text-white transition-colors"
+                >Testimonials</a
+              >
+            </li>
+            <li>
+              <a
+                href="/blogs"
+                class="text-gray-400 hover:text-white transition-colors"
+                >Blog</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- Support -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-indigo-400">Support</h4>
+          <ul>
+            <li>
+              <a
+                href="/faqs"
+                class="text-gray-400 hover:text-white transition-colors"
+                >FAQ</a
+              >
+            </li>
+            <li>
+              <a
+                href="/contact-us"
+                class="text-gray-400 hover:text-white transition-colors"
+                >Contact Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors"
+                >Terms of Service</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- Social Media (Placeholder) -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-indigo-400">
+            Connect With Us
+          </h4>
+          <div class="flex space-x-4">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.5 8h-2.5V8.5a.5.5 0 01.5-.5h2a.5.5 0 00.5-.5V6a.5.5 0 00-.5-.5h-2.5A3.5 3.5 0 009 8.5V10H7.5a.5.5 0 00-.5.5v2a.5.5 0 00.5.5h2.5V18a.5.5 0 00.5.5h2a.5.5 0 00.5-.5v-4h2.5a.5.5 0 00.5-.5v-2a.5.5 0 00-.5-.5z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.5 8h-2.5V8.5a.5.5 0 01.5-.5h2a.5.5 0 00.5-.5V6a.5.5 0 00-.5-.5h-2.5A3.5 3.5 0 009 8.5V10H7.5a.5.5 0 00-.5.5v2a.5.5 0 00.5.5h2.5V18a.5.5 0 00.5.5h2a.5.5 0 00.5-.5v-4h2.5a.5.5 0 00.5-.5v-2a.5.5 0 00-.5-.5z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
     </footer>
-
-</body>
-
+  </body>
 </html>

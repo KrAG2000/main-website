@@ -1,256 +1,324 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Service Registration - Page 1</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f0f2f5;
-            color: #333;
-        }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f0f2f5;
+        color: #333;
+      }
 
-        form {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            max-width: 650px;
-            margin: 30px auto;
-            border: 1px solid #e0e0e0;
-        }
+      form {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        max-width: 650px;
+        margin: 30px auto;
+        border: 1px solid #e0e0e0;
+      }
 
-        h1 {
-            color: #1a73e8;
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 2em;
-            font-weight: 600;
-        }
+      h1 {
+        color: #1a73e8;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 2em;
+        font-weight: 600;
+      }
 
-        h2 {
-            color: #3f51b5;
-            border-bottom: 1px solid #e0e0e0;
-            padding-bottom: 10px;
-            margin-bottom: 25px;
-            font-size: 1.5em;
-        }
+      h2 {
+        color: #3f51b5;
+        border-bottom: 1px solid #e0e0e0;
+        padding-bottom: 10px;
+        margin-bottom: 25px;
+        font-size: 1.5em;
+      }
 
-        div {
-            margin-bottom: 20px;
-        }
+      div {
+        margin-bottom: 20px;
+      }
 
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #555;
-            font-size: 0.95em;
-        }
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #555;
+        font-size: 0.95em;
+      }
 
-        input[type="text"],
-        input[type="email"],
-        input[type="password"],
-        input[type="number"],
-        input[type="tel"],
-        input[type="url"],
-        input[type="search"],
-        textarea,
-        select {
-            width: calc(100% - 24px);
-            padding: 12px;
-            border: 1px solid #c8d6e5;
-            border-radius: 6px;
-            box-sizing: border-box;
-            font-size: 1em;
-            transition: border-color 0.3s, box-shadow 0.3s;
-            background-color: #fdfdff;
-        }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="number"],
+      input[type="tel"],
+      input[type="url"],
+      input[type="search"],
+      textarea,
+      select {
+        width: calc(100% - 24px);
+        padding: 12px;
+        border: 1px solid #c8d6e5;
+        border-radius: 6px;
+        box-sizing: border-box;
+        font-size: 1em;
+        transition:
+          border-color 0.3s,
+          box-shadow 0.3s;
+        background-color: #fdfdff;
+      }
 
-        input[type="text"]:focus,
-        input[type="email"]:focus,
-        input[type="password"]:focus,
-        input[type="number"]:focus,
-        input[type="tel"]:focus,
-        input[type="url"]:focus,
-        input[type="search"]:focus,
-        textarea:focus,
-        select:focus {
-            border-color: #1a73e8;
-            box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
-            outline: none;
-        }
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      input[type="password"]:focus,
+      input[type="number"]:focus,
+      input[type="tel"]:focus,
+      input[type="url"]:focus,
+      input[type="search"]:focus,
+      textarea:focus,
+      select:focus {
+        border-color: #1a73e8;
+        box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
+        outline: none;
+      }
 
-        input[type="color"] {
-            width: 80px;
-            height: 40px;
-            padding: 2px;
-            border: 1px solid #c8d6e5;
-            border-radius: 6px;
-        }
+      input[type="color"] {
+        width: 80px;
+        height: 40px;
+        padding: 2px;
+        border: 1px solid #c8d6e5;
+        border-radius: 6px;
+      }
 
-        input[type="date"],
-        input[type="datetime-local"],
-        input[type="month"],
-        input[type="week"],
-        input[type="time"] {
-            padding: 10px;
-            border: 1px solid #c8d6e5;
-            border-radius: 6px;
-            font-size: 1em;
-        }
+      input[type="date"],
+      input[type="datetime-local"],
+      input[type="month"],
+      input[type="week"],
+      input[type="time"] {
+        padding: 10px;
+        border: 1px solid #c8d6e5;
+        border-radius: 6px;
+        font-size: 1em;
+      }
 
-        input[type="range"] {
-            width: 100%;
-            margin-top: 10px;
-        }
+      input[type="range"] {
+        width: 100%;
+        margin-top: 10px;
+      }
 
-        small {
-            display: block;
-            margin-top: 5px;
-            color: #777;
-            font-size: 0.85em;
-        }
+      small {
+        display: block;
+        margin-top: 5px;
+        color: #777;
+        font-size: 0.85em;
+      }
 
-        button {
-            background-color: #1a73e8;
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 1.1em;
-            font-weight: 600;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            margin-right: 15px;
-        }
+      button {
+        background-color: #1a73e8;
+        color: white;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 1.1em;
+        font-weight: 600;
+        transition:
+          background-color 0.3s ease,
+          transform 0.2s ease;
+        margin-right: 15px;
+      }
 
-        button:hover {
-            background-color: #1565c0;
-            transform: translateY(-2px);
-        }
+      button:hover {
+        background-color: #1565c0;
+        transform: translateY(-2px);
+      }
 
-        button[type="reset"] {
-            background-color: #6c757d;
-        }
+      button[type="reset"] {
+        background-color: #6c757d;
+      }
 
-        button[type="reset"]:hover {
-            background-color: #5a6268;
-            transform: translateY(-2px);
-        }
+      button[type="reset"]:hover {
+        background-color: #5a6268;
+        transform: translateY(-2px);
+      }
 
-        .checkbox-group label {
-            display: inline-block;
-            margin-bottom: 0;
-            font-weight: normal;
-        }
+      .checkbox-group label {
+        display: inline-block;
+        margin-bottom: 0;
+        font-weight: normal;
+      }
 
-        .checkbox-group input[type="checkbox"],
-        .radio-group input[type="radio"] {
-            margin-right: 8px;
-            transform: scale(1.1);
-        }
+      .checkbox-group input[type="checkbox"],
+      .radio-group input[type="radio"] {
+        margin-right: 8px;
+        transform: scale(1.1);
+      }
 
-        .radio-group label {
-            display: inline-block;
-            margin-right: 20px;
-            margin-bottom: 0;
-            font-weight: normal;
-        }
+      .radio-group label {
+        display: inline-block;
+        margin-right: 20px;
+        margin-bottom: 0;
+        font-weight: normal;
+      }
     </style>
-    <script id="FRGM-tracker" src="http://localhost:3001/js-app/js/workstation-v1-tracker.js" defer>
-    </script>
-</head>
+    <script
+      id="FRGM-tracker"
+      src="http://localhost:3001/js-app/js/workstation-v1-tracker.js"
+      defer
+    ></script>
+  </head>
 
-<body>
+  <body>
     <h1>AI-Powered Platform Registration</h1>
     <form action="#" method="post">
-        <h2>Account Information</h2>
-        <div>
-            <label for="username">Desired Username:</label>
-            <input type="text" id="username" name="username" placeholder="Choose a unique username" required>
-        </div>
-        <div>
-            <label for="emailInput">Email Address:</label>
-            <input type="email" id="emailInput" name="emailInput" placeholder="your.email@example.com" required>
-        </div>
-        <div>
-            <label for="passwordInput">Create Password:</label>
-            <input type="password" id="passwordInput" name="passwordInput" placeholder="Minimum 8 characters" required minlength="8">
-        </div>
-        <div>
-            <label for="confirmPassword">Confirm Password:</label>
-            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password" required>
-        </div>
+      <h2>Account Information</h2>
+      <div>
+        <label for="username">Desired Username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Choose a unique username"
+          required
+        />
+      </div>
+      <div>
+        <label for="emailInput">Email Address:</label>
+        <input
+          type="email"
+          id="emailInput"
+          name="emailInput"
+          placeholder="your.email@example.com"
+          required
+        />
+      </div>
+      <div>
+        <label for="passwordInput">Create Password:</label>
+        <input
+          type="password"
+          id="passwordInput"
+          name="passwordInput"
+          placeholder="Minimum 8 characters"
+          required
+          minlength="8"
+        />
+      </div>
+      <div>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          placeholder="Re-enter your password"
+          required
+        />
+      </div>
 
-        <h2>Personal Details</h2>
-        <div>
-            <label for="fullName">Full Name:</label>
-            <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
-        </div>
-        <div>
-            <label for="country">Country of Residence:</label>
-            <select id="country" name="country" required>
-                <option value="">Select your country</option>
-                <option value="usa">United States</option>
-                <option value="ind">India</option>
-                <option value="gbr">United Kingdom</option>
-                <option value="can">Canada</option>
-                <option value="aus">Australia</option>
-                <option value="deu">Germany</option>
-                <option value="jpn">Japan</option>
-                <option value="other">Other</option>
-            </select>
-        </div>
-        <div>
-            <label for="dob">Date of Birth:</label>
-            <input type="date" id="dob" name="dob">
-        </div>
+      <h2>Personal Details</h2>
+      <div>
+        <label for="fullName">Full Name:</label>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          placeholder="Your full name"
+          required
+        />
+      </div>
+      <div>
+        <label for="country">Country of Residence:</label>
+        <select id="country" name="country" required>
+          <option value="">Select your country</option>
+          <option value="usa">United States</option>
+          <option value="ind">India</option>
+          <option value="gbr">United Kingdom</option>
+          <option value="can">Canada</option>
+          <option value="aus">Australia</option>
+          <option value="deu">Germany</option>
+          <option value="jpn">Japan</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" />
+      </div>
 
-        <h2>AI Service Preferences</h2>
-        <div class="checkbox-group">
-            <label>Communication Preferences:</label><br>
-            <input type="checkbox" id="newsletter" name="commPref" value="newsletter">
-            <label for="newsletter">Receive Newsletter</label><br>
-            <input type="checkbox" id="productUpdates" name="commPref" value="productUpdates">
-            <label for="productUpdates">Product Updates</label><br>
-            <input type="checkbox" id="promotionalOffers" name="commPref" value="promotionalOffers">
-            <label for="promotionalOffers">Promotional Offers</label>
-        </div>
+      <h2>AI Service Preferences</h2>
+      <div class="checkbox-group">
+        <label>Communication Preferences:</label><br />
+        <input
+          type="checkbox"
+          id="newsletter"
+          name="commPref"
+          value="newsletter"
+        />
+        <label for="newsletter">Receive Newsletter</label><br />
+        <input
+          type="checkbox"
+          id="productUpdates"
+          name="commPref"
+          value="productUpdates"
+        />
+        <label for="productUpdates">Product Updates</label><br />
+        <input
+          type="checkbox"
+          id="promotionalOffers"
+          name="commPref"
+          value="promotionalOffers"
+        />
+        <label for="promotionalOffers">Promotional Offers</label>
+      </div>
 
-        <div class="radio-group">
-            <label>Primary AI Use Case:</label><br>
-            <input type="radio" id="dev" name="aiUse" value="development">
-            <label for="dev">Software Development</label>
-            <input type="radio" id="data" name="aiUse" value="dataAnalysis">
-            <label for="data">Data Analysis</label>
-            <input type="radio" id="research" name="aiUse" value="research">
-            <label for="research">Academic Research</label>
-            <input type="radio" id="creative" name="aiUse" value="creative">
-            <label for="creative">Creative Content Generation</label>
-        </div>
+      <div class="radio-group">
+        <label>Primary AI Use Case:</label><br />
+        <input type="radio" id="dev" name="aiUse" value="development" />
+        <label for="dev">Software Development</label>
+        <input type="radio" id="data" name="aiUse" value="dataAnalysis" />
+        <label for="data">Data Analysis</label>
+        <input type="radio" id="research" name="aiUse" value="research" />
+        <label for="research">Academic Research</label>
+        <input type="radio" id="creative" name="aiUse" value="creative" />
+        <label for="creative">Creative Content Generation</label>
+      </div>
 
-        <div>
-            <label for="preferredAIModel">Preferred AI Model Complexity:</label>
-            <input type="range" id="preferredAIModel" name="preferredAIModel" min="1" max="5" value="3">
-            <small>1 (Simple) to 5 (Advanced)</small>
-        </div>
+      <div>
+        <label for="preferredAIModel">Preferred AI Model Complexity:</label>
+        <input
+          type="range"
+          id="preferredAIModel"
+          name="preferredAIModel"
+          min="1"
+          max="5"
+          value="3"
+        />
+        <small>1 (Simple) to 5 (Advanced)</small>
+      </div>
 
-        <h2>Terms and Conditions</h2>
-        <div class="checkbox-group">
-            <input type="checkbox" id="termsAgree" name="termsAgree" value="agreed" required>
-            <label for="termsAgree">I agree to the <a href="/terms" target="_blank">Terms of Service</a> and <a href="/privacy" target="_blank">Privacy Policy</a>.</label>
-        </div>
+      <h2>Terms and Conditions</h2>
+      <div class="checkbox-group">
+        <input
+          type="checkbox"
+          id="termsAgree"
+          name="termsAgree"
+          value="agreed"
+          required
+        />
+        <label for="termsAgree"
+          >I agree to the
+          <a href="/terms" target="_blank">Terms of Service</a> and
+          <a href="/privacy" target="_blank">Privacy Policy</a>.</label
+        >
+      </div>
 
-        <div>
-            <button type="submit">Create Account</button>
-            <button type="reset">Clear Form</button>
-        </div>
+      <div>
+        <button type="submit">Create Account</button>
+        <button type="reset">Clear Form</button>
+      </div>
     </form>
-</body>
-
+  </body>
 </html>
