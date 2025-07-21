@@ -1,250 +1,502 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FlowGenius AI - Automate Smarter. Grow Faster.</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://main-website-scim.onrender.com/style.css">
+    <link
+      rel="stylesheet"
+      href="https://main-website-scim.onrender.com/style.css"
+    />
     <style>
-        /* This is for smooth scrolling when navigating within the page */
-        html {
-            scroll-behavior: smooth;
-        }
+      /* This is for smooth scrolling when navigating within the page */
+      html {
+        scroll-behavior: smooth;
+      }
     </style>
 
+    <script
+      id="FRGM-tracker"
+      src="http://localhost:3001/js-app/js/workstation-v1-tracker.js"
+      defer
+    ></script>
 
+    <script
+      id="FRGM-tracker"
+      src="https://preprod-1e2f308t.fragmatic.io/js-app/js/workstation-v1-tracker.js"
+      defer
+    ></script>
+  </head>
 
-
-        <script
-          id="FRGM-tracker"
-          src="https://preprod-1e2f308t.fragmatic.io/js-app/js/workstation-v1-tracker.js"
-          defer>
-        </script>
-      
-
-</head>
-
-<body class="font-inter antialiased bg-gray-50 text-gray-800" id="root">
-
+  <body class="font-inter antialiased bg-gray-50 text-gray-800" id="root">
     <!-- Header/Navigation Bar -->
     <header class="bg-white shadow-sm py-4 fixed w-full z-50 rounded-b-lg">
-        <nav class="container mx-auto px-4 flex justify-between items-center">
-            <div class="flex items-center">
-                <!-- Logo and Site Name -->
-                <a href="/"
-                    class="flex items-center space-x-2 text-2xl font-bold text-indigo-700 hover:text-indigo-900 transition-colors">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M9.75 17L9.25 22 15 22 14.5 17M12 2v20"></path>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M12 12c-3.866 0-7 3.134-7 7s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7z"></path>
-                    </svg>
-                    <span>FlowGenius AI</span>
-                </a>
-            </div>
-            <!-- Navigation Links -->
-            <ul class="flex space-x-6 md:space-x-8">
-                <li><a href="/" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Home</a></li>
-                <li><a href="/features"
-                        class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Features</a></li>
-                <li><a href="/solutions"
-                        class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Solutions</a></li>
-                <li><a href="/pricing"
-                        class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Pricing</a></li>
-                <li><a href="/testimonials"
-                        class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Testimonials</a></li>
-                <li><a href="/about-us" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">About
-                        Us</a></li>
-                <li><a href="/blogs" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Blog</a>
-                </li>
-                <li><a href="/faqs"
-                        class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Support</a></li>
-                <li><a href="/contact-us"
-                        class="text-gray-600 hover:text-indigo-700 font-medium transition-colors">Contact</a></li>
-            </ul>
-            <!-- Auth Buttons -->
-            <div class="flex items-center space-x-4">
-                <a href="/sign-in_out"
-                    class="text-indigo-700 hover:text-indigo-900 font-medium transition-colors">Login</a>
-                <a href="/sign-in_out"
-                    class="bg-indigo-600 text-white px-5 py-2 rounded-full hover:bg-indigo-700 transition-colors shadow-lg transform hover:scale-105">Sign
-                    Up</a>
-            </div>
-        </nav>
+      <nav class="container mx-auto px-4 flex justify-between items-center">
+        <div class="flex items-center">
+          <!-- Logo and Site Name -->
+          <a
+            href="/"
+            class="flex items-center space-x-2 text-2xl font-bold text-indigo-700 hover:text-indigo-900 transition-colors"
+          >
+            <svg
+              class="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9.75 17L9.25 22 15 22 14.5 17M12 2v20"
+              ></path>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 12c-3.866 0-7 3.134-7 7s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7z"
+              ></path>
+            </svg>
+            <span>FlowGenius AI</span>
+          </a>
+        </div>
+        <!-- Navigation Links -->
+        <ul class="flex space-x-6 md:space-x-8">
+          <li>
+            <a
+              href="/"
+              class="text-gray-600 hover:text-indigo-700 font-medium transition-colors"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="/qed"
+              class="text-gray-600 hover:text-indigo-700 font-medium transition-colors"
+              >QED</a
+            >
+          </li>
+          <li>
+            <a
+              href="/features"
+              class="text-gray-600 hover:text-indigo-700 font-medium transition-colors"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a
+              href="/forms"
+              style="
+                color: red;
+                font-weight: 900;
+                border: 3px solid red;
+                padding: 0.5rem;
+              "
+              class="text-gray-600 hover:text-indigo-700 font-medium transition-colors"
+              >Forms</a
+            >
+          </li>
+          <li>
+            <a
+              href="/form1"
+              style="
+                color: red;
+                font-weight: 900;
+                border: 3px solid red;
+                padding: 0.5rem;
+              "
+              class="text-gray-600 hover:text-indigo-700 font-medium transition-colors"
+              >Form 1</a
+            >
+          </li>
+          <li>
+            <a
+              href="/form2"
+              style="
+                color: red;
+                font-weight: 900;
+                border: 3px solid red;
+                padding: 0.5rem;
+              "
+              class="text-gray-600 hover:text-indigo-700 font-medium transition-colors"
+              >Form 2</a
+            >
+          </li>
+          <li>
+            <a
+              href="/pricing"
+              class="text-gray-600 hover:text-indigo-700 font-medium transition-colors"
+              >Pricing</a
+            >
+          </li>
+          <li>
+            <a
+              href="/testimonials"
+              class="text-gray-600 hover:text-indigo-700 font-medium transition-colors"
+              >Testimonials</a
+            >
+          </li>
+          <li>
+            <a
+              href="/about-us"
+              class="text-gray-600 hover:text-indigo-700 font-medium transition-colors"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="/blogs"
+              class="text-gray-600 hover:text-indigo-700 font-medium transition-colors"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a
+              href="/faqs"
+              class="text-gray-600 hover:text-indigo-700 font-medium transition-colors"
+              >Support</a
+            >
+          </li>
+          <li>
+            <a
+              href="/contact-us"
+              class="text-gray-600 hover:text-indigo-700 font-medium transition-colors"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <!-- Auth Buttons -->
+        <div class="flex items-center space-x-4">
+          <a
+            href="/sign-in_out"
+            class="text-indigo-700 hover:text-indigo-900 font-medium transition-colors"
+            >Login</a
+          >
+          <a
+            href="/sign-in_out"
+            class="bg-indigo-600 text-white px-5 py-2 rounded-full hover:bg-indigo-700 transition-colors shadow-lg transform hover:scale-105"
+            >Sign Up</a
+          >
+        </div>
+      </nav>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section
-            class="relative bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-24 md:py-32 overflow-hidden">
-            <div class="container mx-auto px-4 text-center relative z-10">
-                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-up">
-                    Automate Smarter. <br class="md:hidden"> Grow Faster.
-                </h1>
-                <p class="text-xl md:text-2xl mb-10 opacity-90 animate-fade-in-up delay-200">
-                    AI-powered workflow automation designed for SMBs to streamline operations and boost productivity.
-                </p>
-                <div
-                    class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in-up delay-400">
-                    <a href="/sign-in_out"
-                        class="bg-white text-indigo-700 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all shadow-xl transform hover:-translate-y-1">
-                        Start Your Free Trial
-                    </a>
-                    <a href="/features"
-                        class="border border-white text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-white hover:text-indigo-700 transition-all transform hover:-translate-y-1">
-                        Learn More
-                    </a>
-                </div>
-            </div>
-            <!-- Background Blob/Shape for aesthetics -->
-            <div
-                class="absolute -bottom-20 -left-20 w-80 h-80 bg-purple-500 rounded-full opacity-30 blur-3xl animate-blob-bounce">
-            </div>
-            <div
-                class="absolute -top-10 -right-10 w-96 h-96 bg-indigo-500 rounded-full opacity-30 blur-3xl animate-blob-bounce delay-100">
-            </div>
-        </section>
+      <!-- Hero Section -->
+      <section
+        class="relative bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-24 md:py-32 overflow-hidden"
+      >
+        <div class="container mx-auto px-4 text-center relative z-10">
+          <h1
+            class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-up"
+          >
+            Automate Smarter. <br class="md:hidden" />
+            Grow Faster.
+          </h1>
+          <p
+            class="text-xl md:text-2xl mb-10 opacity-90 animate-fade-in-up delay-200"
+          >
+            AI-powered workflow automation designed for SMBs to streamline
+            operations and boost productivity.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in-up delay-400"
+          >
+            <a
+              href="/sign-in_out"
+              class="bg-white text-indigo-700 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all shadow-xl transform hover:-translate-y-1"
+            >
+              Start Your Free Trial
+            </a>
+            <a
+              href="/features"
+              class="border border-white text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-white hover:text-indigo-700 transition-all transform hover:-translate-y-1"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+        <!-- Background Blob/Shape for aesthetics -->
+        <div
+          class="absolute -bottom-20 -left-20 w-80 h-80 bg-purple-500 rounded-full opacity-30 blur-3xl animate-blob-bounce"
+        ></div>
+        <div
+          class="absolute -top-10 -right-10 w-96 h-96 bg-indigo-500 rounded-full opacity-30 blur-3xl animate-blob-bounce delay-100"
+        ></div>
+      </section>
 
-        <!-- Features Overview Section -->
-        <section class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-                    Why Choose FlowGenius AI?
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Feature 1 -->
-                    <div
-                        class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform hover:scale-105 transition-transform duration-300 group">
-                        <div class="text-indigo-600 mb-4">
-                            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 text-center group-hover:text-indigo-700">
-                            Intelligent Automation</h3>
-                        <p class="text-gray-600 text-center">Leverage AI to automate repetitive tasks, reduce errors,
-                            and free up your team for strategic work.</p>
-                    </div>
-                    <!-- Feature 2 -->
-                    <div
-                        class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform hover:scale-105 transition-transform duration-300 group">
-                        <div class="text-indigo-600 mb-4">
-                            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 19V6l12-3v14L9 19zm0 0c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm12 0c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2z">
-                                </path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 text-center group-hover:text-indigo-700">
-                            No-Code Simplicity</h3>
-                        <p class="text-gray-600 text-center">Build powerful workflows with our intuitive drag-and-drop
-                            interface – no coding required.</p>
-                    </div>
-                    <!-- Feature 3 -->
-                    <div
-                        class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform hover:scale-105 transition-transform duration-300 group">
-                        <div class="text-indigo-600 mb-4">
-                            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3-.895-3-2 .343-2 3-2z"></path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2-.343-2-3-2z"></path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 20c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2-.343-2-3-2z"></path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 4c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2-.343-2-3-2z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 text-center group-hover:text-indigo-700">
-                            Scalable for SMBs</h3>
-                        <p class="text-gray-600 text-center">Designed to grow with your business, adapting to your
-                            evolving automation needs.</p>
-                    </div>
-                </div>
+      <!-- Features Overview Section -->
+      <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12"
+          >
+            Why Choose FlowGenius AI?
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div
+              class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform hover:scale-105 transition-transform duration-300 group"
+            >
+              <div class="text-indigo-600 mb-4">
+                <svg
+                  class="w-12 h-12 mx-auto"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="text-xl font-semibold text-gray-900 mb-3 text-center group-hover:text-indigo-700"
+              >
+                Intelligent Automation
+              </h3>
+              <p class="text-gray-600 text-center">
+                Leverage AI to automate repetitive tasks, reduce errors, and
+                free up your team for strategic work.
+              </p>
             </div>
-        </section>
+            <!-- Feature 2 -->
+            <div
+              class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform hover:scale-105 transition-transform duration-300 group"
+            >
+              <div class="text-indigo-600 mb-4">
+                <svg
+                  class="w-12 h-12 mx-auto"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 19V6l12-3v14L9 19zm0 0c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm12 0c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2z"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="text-xl font-semibold text-gray-900 mb-3 text-center group-hover:text-indigo-700"
+              >
+                No-Code Simplicity
+              </h3>
+              <p class="text-gray-600 text-center">
+                Build powerful workflows with our intuitive drag-and-drop
+                interface – no coding required.
+              </p>
+            </div>
+            <!-- Feature 3 -->
+            <div
+              class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform hover:scale-105 transition-transform duration-300 group"
+            >
+              <div class="text-indigo-600 mb-4">
+                <svg
+                  class="w-12 h-12 mx-auto"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3-.895-3-2 .343-2 3-2z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2-.343-2-3-2z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 20c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2-.343-2-3-2z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 4c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2-.343-2-3-2z"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="text-xl font-semibold text-gray-900 mb-3 text-center group-hover:text-indigo-700"
+              >
+                Scalable for SMBs
+              </h3>
+              <p class="text-gray-600 text-center">
+                Designed to grow with your business, adapting to your evolving
+                automation needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <!-- Call to Action Section -->
-        <section class="py-16 md:py-24 bg-gradient-to-r from-indigo-700 to-purple-700 text-white text-center">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
-                <p class="text-xl md:text-2xl mb-10 opacity-90">
-                    Join hundreds of SMBs already automating smarter with FlowGenius AI.
-                </p>
-                <a href="/sign-in_out"
-                    class="bg-white text-indigo-700 px-8 py-4 rounded-full text-xl font-semibold hover:bg-gray-100 transition-all shadow-xl transform hover:-translate-y-1">
-                    Get Started Today
-                </a>
-            </div>
-        </section>
+      <!-- Call to Action Section -->
+      <section
+        class="py-16 md:py-24 bg-gradient-to-r from-indigo-700 to-purple-700 text-white text-center"
+      >
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p class="text-xl md:text-2xl mb-10 opacity-90">
+            Join hundreds of SMBs already automating smarter with FlowGenius AI.
+          </p>
+          <a
+            href="/sign-in_out"
+            class="bg-white text-indigo-700 px-8 py-4 rounded-full text-xl font-semibold hover:bg-gray-100 transition-all shadow-xl transform hover:-translate-y-1"
+          >
+            Get Started Today
+          </a>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-            <!-- Company Info -->
-            <div>
-                <h4 class="text-lg font-semibold mb-4 text-indigo-400">FlowGenius AI</h4>
-                <p class="text-gray-400">Automate Smarter. Grow Faster.</p>
-                <p class="text-gray-400 mt-2">&copy; 2025 FlowGenius AI. All rights reserved.</p>
-            </div>
-            <!-- Quick Links -->
-            <div>
-                <h4 class="text-lg font-semibold mb-4 text-indigo-400">Quick Links</h4>
-                <ul>
-                    <li><a href="/features" class="text-gray-400 hover:text-white transition-colors">Features</a></li>
-                    <li><a href="/pricing" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
-                    <li><a href="/testimonials"
-                            class="text-gray-400 hover:text-white transition-colors">Testimonials</a></li>
-                    <li><a href="/blogs" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
-                </ul>
-            </div>
-            <!-- Support -->
-            <div>
-                <h4 class="text-lg font-semibold mb-4 text-indigo-400">Support</h4>
-                <ul>
-                    <li><a href="/support" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
-                    <li><a href="/contact-us" class="text-gray-400 hover:text-white transition-colors">Contact Us</a>
-                    </li>
-                    <li><a href="/pp-tc" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
-                    </li>
-                    <li><a href="/pp-tc" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- Social Media (Placeholder) -->
-            <div>
-                <h4 class="text-lg font-semibold mb-4 text-indigo-400">Connect With Us</h4>
-                <div class="flex space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.5 8h-2.5V8.5a.5.5 0 01.5-.5h2a.5.5 0 00.5-.5V6a.5.5 0 00-.5-.5h-2.5A3.5 3.5 0 009 8.5V10H7.5a.5.5 0 00-.5.5v2a.5.5 0 00.5.5h2.5V18a.5.5 0 00.5.5h2a.5.5 0 00.5-.5v-4h2.5a.5.5 0 00.5-.5v-2a.5.5 0 00-.5-.5z">
-                            </path>
-                        </svg>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.5 8h-2.5V8.5a.5.5 0 01.5-.5h2a.5.5 0 00.5-.5V6a.5.5 0 00-.5-.5h-2.5A3.5 3.5 0 009 8.5V10H7.5a.5.5 0 00-.5.5v2a.5.5 0 00.5.5h2.5V18a.5.5 0 00.5.5h2a.5.5 0 00.5-.5v-4h2.5a.5.5 0 00.5-.5v-2a.5.5 0 00-.5-.5z">
-                            </path>
-                        </svg>
-                    </a>
-                </div>
-            </div>
+      <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Company Info -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-indigo-400">
+            FlowGenius AI
+          </h4>
+          <p class="text-gray-400">Automate Smarter. Grow Faster.</p>
+          <p class="text-gray-400 mt-2">
+            &copy; 2025 FlowGenius AI. All rights reserved.
+          </p>
         </div>
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-indigo-400">
+            Quick Links
+          </h4>
+          <ul>
+            <li>
+              <a
+                href="/features"
+                class="text-gray-400 hover:text-white transition-colors"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a
+                href="/pricing"
+                class="text-gray-400 hover:text-white transition-colors"
+                >Pricing</a
+              >
+            </li>
+            <li>
+              <a
+                href="/testimonials"
+                class="text-gray-400 hover:text-white transition-colors"
+                >Testimonials</a
+              >
+            </li>
+            <li>
+              <a
+                href="/blogs"
+                class="text-gray-400 hover:text-white transition-colors"
+                >Blog</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- Support -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-indigo-400">Support</h4>
+          <ul>
+            <li>
+              <a
+                href="/support"
+                class="text-gray-400 hover:text-white transition-colors"
+                >FAQ</a
+              >
+            </li>
+            <li>
+              <a
+                href="/contact-us"
+                class="text-gray-400 hover:text-white transition-colors"
+                >Contact Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="/pp-tc"
+                class="text-gray-400 hover:text-white transition-colors"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a
+                href="/pp-tc"
+                class="text-gray-400 hover:text-white transition-colors"
+                >Terms of Service</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- Social Media (Placeholder) -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-indigo-400">
+            Connect With Us
+          </h4>
+          <div class="flex space-x-4">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.5 8h-2.5V8.5a.5.5 0 01.5-.5h2a.5.5 0 00.5-.5V6a.5.5 0 00-.5-.5h-2.5A3.5 3.5 0 009 8.5V10H7.5a.5.5 0 00-.5.5v2a.5.5 0 00.5.5h2.5V18a.5.5 0 00.5.5h2a.5.5 0 00.5-.5v-4h2.5a.5.5 0 00.5-.5v-2a.5.5 0 00-.5-.5z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.5 8h-2.5V8.5a.5.5 0 01.5-.5h2a.5.5 0 00.5-.5V6a.5.5 0 00-.5-.5h-2.5A3.5 3.5 0 009 8.5V10H7.5a.5.5 0 00-.5.5v2a.5.5 0 00.5.5h2.5V18a.5.5 0 00.5.5h2a.5.5 0 00.5-.5v-4h2.5a.5.5 0 00.5-.5v-2a.5.5 0 00-.5-.5z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
     </footer>
-
-</body>
-
+  </body>
 </html>
