@@ -20,7 +20,7 @@
 $trackingScriptHtml = '
     <script
       id="FRGM-tracker"
-      src="http://localhost:3001/js-app/js/c067d127-tracker.js"
+      src="https://preprod-1e2f308t.fragmatic.io/js-app/js/workstation-v1-tracker.js"
       defer
     ></script>';
 // --- END: Tracking Script Content ---
