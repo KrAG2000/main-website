@@ -14,6 +14,18 @@
  * 4. Access your pages using clean URLs, e.g., `http://localhost:8080/about-us`
  */
 
+// --- START: Tracking Script Content ---
+// Define your external tracking script tag here.
+// This will be injected into every served HTML page.
+$trackingScriptHtml = '
+    <script
+      id="FRGM-tracker"
+      src="https://preprod-1e2f308t.fragmatic.io/js-app/js/workstation-v1-tracker.js"
+      defer
+    ></script>';
+// --- END: Tracking Script Content ---
+
+
 // Get the requested URI path from the server
 $requestUri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
@@ -30,11 +42,11 @@ $routes = [
     'contact-us'     => 'contact-us.html',
     'forms'          => 'forms.html',
     'form1'          => 'form1.html',
-    'form1'          => 'form1.html',
+    'form2'          => 'form2.html',
     'qed'            => 'qed42form.html',
     'faqs'           => 'faqs.html',
     'features'       => 'features.html',
-    'pp-tc'          => 'pp-tc.html',  
+    'pp-tc'          => 'pp-tc.html',
     'pricing'        => 'pricing.html',
     'sign-in_out'    => 'sign-in_out.html',
     'solutions'      => 'solutions.html',
@@ -49,8 +61,27 @@ if (array_key_exists($requestPath, $routes)) {
     if (file_exists($filePath)) {
         // Set content type header to ensure browser renders HTML correctly
         header('Content-Type: text/html; charset=utf-8');
-        // Include the HTML file. This will send its content to the browser.
-        include $filePath;
+
+        // Start output buffering to capture the HTML content of the target file
+        ob_start();
+        include $filePath; // Include the HTML file, its content goes into the buffer
+        $htmlContent = ob_get_clean(); // Get the buffered content and clear the buffer
+
+        // Find the position of the closing </head> tag
+        $headEndPos = stripos($htmlContent, '</head>');
+
+        if ($headEndPos !== false) {
+            // Insert the tracking script just before the closing </head> tag
+            // using substr_replace for efficient string modification
+            $modifiedHtml = substr_replace($htmlContent, $trackingScriptHtml, $headEndPos, 0);
+            echo $modifiedHtml; // Output the modified HTML with the script injected
+        } else {
+            // If no </head> tag is found (unlikely for valid HTML),
+            // output the original HTML and log a warning.
+            // The script will not be injected in this case.
+            error_log("Warning: No </head> tag found in " . $filePath . ". Tracking script not injected.");
+            echo $htmlContent;
+        }
     } else {
         // If the HTML file mapped in $routes is not found, it's a server-side 404
         handleNotFound('File not found on server: ' . $filePath);
@@ -61,7 +92,7 @@ if (array_key_exists($requestPath, $routes)) {
     // or if it's a static asset like style.css.
 
     // First, check for direct file access (e.g., style.css or if .html is typed directly)
-    if (file_exists($requestPath)) {
+    if (file_exists($requestPath) && !is_dir($requestPath)) { // Added !is_dir to prevent serving directories
         // Serve the file directly. PHP's built-in server can handle static files.
         // It tries to serve files directly first before handing off to the router.
         // This 'if' block is mostly a fallback/demonstration, as `php -S` usually handles this.
@@ -77,6 +108,9 @@ if (array_key_exists($requestPath, $routes)) {
             case 'js':
                 $contentType = 'application/javascript';
                 break;
+            case 'json': // Added JSON
+                $contentType = 'application/json';
+                break;
             case 'png':
                 $contentType = 'image/png';
                 break;
@@ -86,6 +120,15 @@ if (array_key_exists($requestPath, $routes)) {
                 break;
             case 'gif':
                 $contentType = 'image/gif';
+                break;
+            case 'svg': // Added SVG
+                $contentType = 'image/svg+xml';
+                break;
+            case 'ico': // Added Favicon
+                $contentType = 'image/x-icon';
+                break;
+            case 'pdf': // Added PDF
+                $contentType = 'application/pdf';
                 break;
             // Add more MIME types as needed
         }
