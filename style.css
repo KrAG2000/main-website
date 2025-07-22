@@ -5,99 +5,101 @@
 
 /* Base body styles */
 body {
-    font-family: 'Inter', sans-serif;
-    color: #333; /* Darker gray for better readability */
-    line-height: 1.6;
+  font-family: "Inter", sans-serif;
+  color: #333; /* Darker gray for better readability */
+  line-height: 1.6;
 }
 
-#root{
-    background: red;
+#root {
+  background: red;
 }
 
 /* Animations for Hero Section */
 @keyframes fadeInFromBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fade-in-up {
-    animation: fadeInFromBottom 0.8s ease-out forwards;
+  animation: fadeInFromBottom 0.8s ease-out forwards;
 }
 
 .animate-fade-in-up.delay-200 {
-    animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 .animate-fade-in-up.delay-400 {
-    animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 
 /* Blob/Shape Animations */
 @keyframes blobBounce {
-    0%, 100% {
-        transform: scale(1) translate(0, 0);
-    }
-    50% {
-        transform: scale(1.05) translate(10px, -10px);
-    }
+  0%,
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.05) translate(10px, -10px);
+  }
 }
 
 .animate-blob-bounce {
-    animation: blobBounce 8s infinite alternate ease-in-out;
+  animation: blobBounce 8s infinite alternate ease-in-out;
 }
 
 .animate-blob-bounce.delay-100 {
-    animation-delay: 1s;
+  animation-delay: 1s;
 }
 
 /* General Link/Button Hover Effects */
 a {
-    transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 button {
-    transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Specific styling for shadow and rounded corners (Tailwind handles most of this, but for explicit control) */
 .shadow-lg {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .rounded-lg {
-    border-radius: 0.5rem; /* 8px */
+  border-radius: 0.5rem; /* 8px */
 }
 
 .rounded-xl {
-    border-radius: 0.75rem; /* 12px */
+  border-radius: 0.75rem; /* 12px */
 }
 
 .rounded-full {
-    border-radius: 9999px;
+  border-radius: 9999px;
 }
 
 /* Ensure images are responsive within their containers */
 img {
-    max-width: 100%;
-    height: auto;
-    display: block; /* Removes extra space below image */
+  max-width: 100%;
+  height: auto;
+  display: block; /* Removes extra space below image */
 }
 
 /* Container for consistent spacing */
 .container {
-    max-width: 1200px; /* Or whatever max-width fits the design */
+  max-width: 1200px; /* Or whatever max-width fits the design */
 }
 
 /* Focus styles for accessibility */
 *:focus {
-    outline: 2px solid theme('colors.indigo.500'); /* A visible outline */
-    outline-offset: 2px;
-    border-radius: 0.25rem;
+  outline: 2px solid theme("colors.indigo.500"); /* A visible outline */
+  outline-offset: 2px;
+  border-radius: 0.25rem;
 }
-

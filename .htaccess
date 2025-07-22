@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # If the request is for a real file (CSS, JS, images, existing HTML), serve it directly
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule ^ - [L]
+
+    # If the request is for a real directory, serve its default index file (index.php, index.html etc.)
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # If the request is NOT for a real file or a real directory,
+    # then internally rewrite it to index.php.
+    # This handles your clean URLs like /about-us
+    RewriteRule ^(.*)$ index.php [L,QSA]
+</IfModule>
