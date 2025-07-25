@@ -18,11 +18,12 @@
 // Define your external tracking script tag here.
 // This will be injected into every served HTML page.
 $trackingScriptHtml = '
-    <script
-      id="FRGM-tracker"
-      src="https://preprod-1e2f308t.fragmatic.io/js-app/js/workstation-v1-tracker.js"
-      defer
-    ></script>';
+        <script
+          id="FRGM-tracker"
+          src="https://preprod-1e2f308t.fragmatic.io/js-app/js/c067d127-tracker.js"
+          defer>
+        </script>
+      ';
 // --- END: Tracking Script Content ---
 
 
